@@ -1,0 +1,408 @@
+@font-face {
+  font-family: 'montserrat';
+  src: url('/static/fonts/montserrat.woff') format('woff');
+}
+@font-face {
+  font-family: 'montserrat-bold';
+  src: url('/fonts/montserrat-bold.woff') format('woff');
+}
+
+#yangmountain {
+  background-color: transparent;
+}
+
+.heading-q3 {
+  font-family: 'montserrat', sans-serif;
+  letter-spacing: 0.025vw;
+  margin: 50px auto 0;
+  max-width: 800px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 650px) {
+  .heading-q3 {
+    padding: 0 50px;
+  }
+}
+
+.heading-q3 h2 {
+  color: #13376f;
+  font-size: 20px;
+  font-family: 'montserrat-bold', sans-serif-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 650px) {
+  .heading-q3 h2 {
+    font-size: 30px;
+  }
+}
+
+.heading-q3 h3 {
+  color: #da3248;
+  font-size: 14px;
+  font-family: 'montserrat-bold', sans-serif-serif;
+  letter-spacing: 0.25vw;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 650px) {
+  .heading-q3 h3 {
+    font-size: 22px;
+  }
+}
+
+.prize.is-revealed {
+  animation: pop-small 1s;
+}
+
+.donate-button {
+  background-color: #da3248;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-family: montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 15px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+}
+
+.donate-button:hover {
+  background-color: hsl(352, 69%, 39%);
+}
+
+.canvas {
+  font-family: montserrat, sans-serif;
+  max-width: 1200px;
+  height: 32vw;
+  position: relative;
+  margin: 5vw auto 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .canvas {
+    height: 400px;
+    margin: 50px auto 0;
+  }
+}
+
+.mountains {
+  width: 90%;
+  height: auto;
+  left: 7%;
+  bottom: 0;
+  position: absolute;
+}
+
+.yang {
+  position: absolute;
+  bottom: 0;
+  left: 6.5%;
+  z-index: 3;
+}
+
+.yang-progress {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1vmin;
+  color: #13376f;
+  padding: 1vmin;
+  font-size: 1.8vmin;
+  font-family: 'montserrat-bold', sans-serif;
+  text-align: right;
+  position: absolute;
+  right: 90%;
+  top: -20%;
+}
+
+.yang-animoji {
+  height: auto;
+  width: 20px;
+  transform: translateX(-20%);
+}
+@media screen and (min-width: 650px) {
+  .yang-animoji {
+    width: 25px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .yang-animoji {
+    width: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .yang-animoji {
+    width: 40px;
+  }
+}
+
+.goal {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 2000ms;
+}
+.goal:nth-of-type(1) .goal-cloud {
+  animation-duration: 17s;
+}
+.goal:nth-of-type(2) .goal-cloud {
+  animation-duration: 24s;
+}
+.goal:nth-of-type(3) .goal-cloud {
+  animation-duration: 16s;
+}
+.goal:nth-of-type(4) .goal-cloud {
+  animation-duration: 18s;
+}
+.goal:nth-of-type(4) .goal-flag {
+  transform: translate(1.5vmin, -330%);
+}
+@media screen and (min-width: 650px) {
+  .goal:nth-of-type(4) .goal-flag {
+    transform: translate(1vmin, -240%);
+  }
+}
+.goal:nth-of-type(5) .goal-cloud {
+  animation-duration: 23s;
+}
+.goal:nth-of-type(6) .goal-cloud {
+  animation-duration: 25s;
+}
+.goal:nth-of-type(7) .goal-cloud {
+  animation-duration: 19s;
+}
+.goal.is-revealed .goal-cloud {
+  left: -20vmin;
+  opacity: 0;
+}
+.goal.is-revealed .goal-flag {
+  opacity: 1;
+}
+
+.goal.is-revealed .goal-chest {
+  animation: pop 1s 1s forwards;
+  opacity: 1;
+}
+
+.goal.is-accomplished .goal-flag {
+  background-color: #c1dcf0;
+}
+
+.goal.is-accomplished .goal-chest {
+  animation: pop 1s 0.5s forwards;
+  background-image: url('/src/images/portfolio/2-yang2020/yang-mountain/chest--unlocked.png');
+}
+
+.goal.is-accomplished .goal-flag:before {
+  border-color: #c1dcf0 transparent transparent transparent;
+}
+.goal.is-accomplished .goal-flag:after {
+  border-color: transparent transparent transparent #c1dcf0;
+}
+
+.goal-flag {
+  background-color: #13376f;
+  color: white;
+  padding: 1vmin 0.25vmin 1vmin 1vmin;
+  font-size: 1.3vmin;
+  font-family: 'montserrat-bold', sans-serif;
+  opacity: 0;
+  position: absolute;
+  transition: background-color 0.5s 0.5s ease-in, opacity 0.5s ease-in;
+  top: 0;
+  transform: translate(1.5vmin, -350%);
+  left: 0;
+  z-index: -1;
+}
+.goal-flag:before,
+.goal-flag:after {
+  content: '';
+  border-style: solid;
+  position: absolute;
+  right: -5px;
+  transition: border-color 0.5s 0.5s ease-in;
+}
+.goal-flag:before {
+  border-width: 10px 5px 0 0;
+  border-color: #13376f transparent transparent transparent;
+  top: 0px;
+}
+.goal-flag:after {
+  border-width: 10px 0 0 5px;
+  border-color: transparent transparent transparent #13376f;
+  bottom: 0px;
+}
+@media screen and (min-width: 650px) {
+  .goal-flag {
+    transform: translate(1.5vmin, -240%);
+    padding-right: 1vmin;
+  }
+  .goal-flag:before,
+  .goal-flag:after {
+    right: -10px;
+  }
+  .goal-flag:before {
+    border-width: 20px 10px 0 0;
+  }
+  .goal-flag:after {
+    border-width: 20px 0 0 10px;
+  }
+}
+
+.goal-post {
+  background-color: #f7f7f7;
+  width: 1vmin;
+  height: 90px;
+  position: absolute;
+  left: -1vmin;
+  top: 0;
+  z-index: -1;
+}
+@media screen and (min-width: 650px) {
+  .goal-post {
+    width: 5px;
+    left: -5px;
+  }
+}
+
+.goal-flagText:before {
+  content: attr(data-goal);
+  color: white;
+}
+
+.goal-text {
+  text-align: center;
+  color: #13376f;
+  font-family: 'montserrat-bold', sans-serif;
+  letter-spacing: 1px;
+  transform: translate(-30%, -200%);
+  opacity: 0;
+  z-index: 0;
+  position: relative;
+}
+
+.goal-chest {
+  background: url('/src/images/portfolio/2-yang2020/yang-mountain/chest--locked.png')
+    center no-repeat;
+  background-size: 90%;
+  height: 5vw;
+  left: -2vw;
+  opacity: 0;
+  position: absolute;
+  top: -3vw;
+  transition: opacity 0.25s 0.5s;
+  width: 5vw;
+  z-index: 1;
+}
+
+.goal.is-revealed:not(.is-accomplished) .goal-chest {
+  animation: chest-shake 10s 1s infinite;
+}
+
+.goal-cloud {
+  animation: cloud-floating infinite linear;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  bottom: -30px;
+  left: -5vmin;
+  transition: left 2.5s, opacity 2s ease;
+  z-index: 1;
+}
+@media screen and (min-width: 500px) {
+  .goal-cloud {
+    width: 60px;
+    height: 41px;
+  }
+}
+@media screen and (min-width: 650px) {
+  .goal-cloud {
+    width: 80px;
+    height: 55px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .goal-cloud {
+    width: 110px;
+    height: 65px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .goal-cloud {
+    width: 120px;
+    height: 82px;
+  }
+}
+
+@keyframes cloud-floating {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translate(-15%, 2%);
+  }
+  66.7% {
+    transform: translate(15%, -2%);
+  }
+}
+
+@keyframes pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+}
+
+@keyframes pop-small {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes chest-shake {
+  0%,
+  2%,
+  4%,
+  6%,
+  8% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  1%,
+  3%,
+  5%,
+  7%,
+  9% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  10%,
+  30%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+  20%,
+  24%,
+  28% {
+    transform: translateY(-2px);
+  }
+  22%,
+  26% {
+    transform: translateY(0px);
+  }
+}
