@@ -49,6 +49,7 @@ class Logo extends React.Component {
     super(props)
     this.state = {
       animateLogo: false,
+      windowWidth: 0,
     }
   }
   animateLogo = () => {
@@ -59,14 +60,21 @@ class Logo extends React.Component {
     this.setState(state => ({ animateLogo: false }))
   }
 
+  handleWindowSizeChange = () => {
+    this.setState({ windowWidth: this.state.windowWidth })
+  }
+
   componentDidMount() {
     this.logo.addEventListener('mouseover', this.animateLogo)
     this.logo.addEventListener('mouseout', this.quitLogoAnimation)
+    this.handleWindowSizeChange() // Set width
+    window.addEventListener('resize', this.handleWindowSizeChange)
   }
 
   componentWillUnMount() {
     this.logo.removeEventListener('mouseover', this.animateLogo)
     this.logo.removeEventListener('mouseout', this.quitLogoAnimation)
+    window.removeEventListener('resize', this.handleWindowSizeChange)
   }
 
   render() {
@@ -85,7 +93,7 @@ class Logo extends React.Component {
           <Box ml={2}>
             <LogoText
               animateLogo={
-                window.innerWidth < parseInt(theme.breakpoints.lg)
+                this.state.windowWidth < parseInt(theme.breakpoints.lg)
                   ? true
                   : this.state.animateLogo
               }
@@ -104,7 +112,7 @@ class Logo extends React.Component {
             <LogoText
               bottom="true"
               animateLogo={
-                window.innerWidth < parseInt(theme.breakpoints.lg)
+                this.state.windowWidth < parseInt(theme.breakpoints.lg)
                   ? true
                   : this.state.animateLogo
               }

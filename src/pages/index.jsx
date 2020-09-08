@@ -18,13 +18,4 @@ const IndexPage = ({ location }) => (
   </Layout>
 )
 
-// .row.bc-xxlt
-//   .screen.screen--homepage
-//     %svg.screen-logo
-//       %use{'xlink:href' => "#{image_path('icons.svg')}#logo"}
-//     .cell.well.well--t{:style => "pointer-events: none"}
-//       %img{:src=>'/assets/images/logo/logo-wordmark.svg'}
-//       -if config[:islive]
-//         .screen-subtitle crafting beautiful, intuitive, user-centric solutions
-
 export default IndexPage
