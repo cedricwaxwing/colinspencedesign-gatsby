@@ -1,7 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
-import { border } from 'styled-system'
 import { Box, Flex } from '@components/Grid'
 import { Icon } from '@components/Icons'
 

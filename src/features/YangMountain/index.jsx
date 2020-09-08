@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Cell from '@components/Cell'
-import Image from '@components/Image'
 import ChestLocked from '../../../static/images/yang-mountain/chest--locked.png'
 import ChestUnlocked from '../../../static/images/yang-mountain/chest--unlocked.png'
 import YangFall from '../../../static/images/yang-mountain/YangAnimsForMountain_FALL.gif'
@@ -255,6 +254,7 @@ export default props => {
       <VisibilitySensor partialVisibility onChange={onChange}>
         <div className="canvas" id="yang-mountain">
           <img
+            alt=""
             className="mountains"
             height="389"
             src={YangMountainBg}
@@ -262,7 +262,7 @@ export default props => {
           />
           <div className="yang">
             <div className="yang-progress">$0</div>
-            <img className="yang-animoji" src={YangIdle} />
+            <img className="yang-animoji" alt="" src={YangIdle} />
           </div>
           <div className="goal">
             <div

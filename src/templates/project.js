@@ -1,6 +1,5 @@
 import React from 'react'
 import { Layout } from '@components/Layout'
-import { SEO } from '@components/SEO'
 import { Intro, Nav } from '../features/Project'
 
 export default ({ entry, prev, next, children, ...props }) => {

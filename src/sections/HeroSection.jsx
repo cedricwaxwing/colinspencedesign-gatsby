@@ -1,6 +1,4 @@
 import React from 'react'
-
-import css from '@styled-system/css'
 import HeroLogo from '../features/HeroLogo'
 import logoWordMark from '../images/logo-wordmark.svg'
 import { Box, Flex } from '@components/Grid'

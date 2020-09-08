@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import tw, { styled } from 'twin.macro'
 import PortfolioProject from '../../templates/project'
 import { Box, Flex } from '@components/Grid'
 import Button from '@components/Button'
@@ -8,7 +7,7 @@ import { OutboundLink } from '@components/Link'
 import Cell from '@components/Cell'
 import Image from '@components/Image'
 import { Text } from '@components/Text'
-import { ProjectHeading, Shadow, Caption } from '@components/Portfolio'
+import { ProjectHeading, Shadow } from '@components/Portfolio'
 
 const Description = () => (
   <div>

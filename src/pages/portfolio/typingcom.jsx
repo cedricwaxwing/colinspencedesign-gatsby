@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import tw, { styled } from 'twin.macro'
 import PortfolioProject from '../../templates/project'
 import { Box, Flex } from '@components/Grid'
 import { OutboundLink } from '@components/Link'
@@ -11,7 +10,7 @@ import SalesSiteVideo from '../../../static/images/typingcom-sales-site.mp4'
 import TeachersPageVideo from '../../../static/images/typingcom-teachers-opener.mp4'
 import ExtrasVideo from '../../../static/images/typingcom-fun-extras-2.mp4'
 import TeacherPortalVideo from '../../../static/images/typingcom-tp.mp4'
-import { ProjectHeading, Shadow, Caption } from '@components/Portfolio'
+import { ProjectHeading, Shadow } from '@components/Portfolio'
 
 const Description = () => (
   <div>
@@ -132,6 +131,7 @@ export default ({ data }) => {
               mute="true"
               preload="true"
               width="100%"
+              track="false"
             >
               <source src={SalesSiteVideo} type="video/mp4" />
             </video>

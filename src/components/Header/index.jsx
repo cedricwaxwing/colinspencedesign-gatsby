@@ -49,11 +49,11 @@ class Header extends React.Component {
         zIndex="3"
         css={{
           boxShadow: this.state.isFixed ? '0 2px 4px rgba(0,0,0,0.05)' : null,
+          transition: 'background-color 0.25s ease-in-out'
         }}
         ref={nav => {
           this.nav = nav
         }}
-        css={{ transition: 'background-color 0.25s ease-in-out' }}
       >
         <Flex alignItems="center" justifyContent="space-between">
           <Link

@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { theme } from '../../util/style/theme'
 import { color, layout } from 'styled-system'
-import css from '@styled-system/css'
 import typography from '../../../config/typography'
 
 import { Box, Flex } from '@components/Grid'

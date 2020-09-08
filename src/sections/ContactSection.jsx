@@ -1,12 +1,11 @@
 import React from 'react'
-import { css } from 'styled-system'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Cell from '@components/Cell'
 import ContactForm from '@components/ContactForm'
 import { Box, Flex } from '@components/Grid'
 import Heading from '@components/Heading'
-import { Link, OutboundLink } from '@components/Link'
+import { OutboundLink } from '@components/Link'
 import { Text } from '@components/Text'
 
 const ContactSection = () => {

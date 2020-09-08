@@ -1,12 +1,12 @@
 import React from 'react'
 // import { VelocityComponent } from 'velocity-react'
 
-import { keyframes } from 'styled-components'
+// import { keyframes } from 'styled-components'
 import { color, layout } from 'styled-system'
-import logo from '../../images/logomark.svg'
-import { Box } from '@components/Grid'
+// import logo from '../../images/logomark.svg'
+// import { Box } from '@components/Grid'
 import { Icon } from '@components/Icons'
-import Image from '@components/Image'
+// import Image from '@components/Image'
 // require('velocity-animate/velocity.ui')
 
 class HeroLogo extends React.Component {

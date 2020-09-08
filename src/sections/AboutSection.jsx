@@ -9,36 +9,28 @@ import { OutboundLink } from '@components/Link'
 import Target from '@components/Target'
 import { Text } from '@components/Text'
 
-import portrait1 from '../images/colin-spence-portrait.jpg'
-import portrait2 from '../images/colin-spence-portrait-2.jpg'
-
 const AboutSection = () => {
   const data = useStaticQuery(graphql`
     query myPortraits {
-      portrait1: allImageSharp(
-        filter: { id: { eq: "f0f21b08-6730-5923-a5e0-bbb44e526913" } }
-      ) {
-        nodes {
-          fluid {
+      portrait1: file(relativePath: { eq: "colin-spence-portrait.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 60) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
-          id
         }
       }
-      portrait2: allImageSharp(
-        filter: { id: { eq: "cbf3688a-1b4b-591c-8bd0-271f1a0041f6" } }
-      ) {
-        nodes {
-          fluid {
+      portrait2: file(relativePath: { eq: "colin-spence-portrait-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 60) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
-          id
         }
       }
     }
   `)
   return (
     <Target id="about">
+      {console.log(data)}
       <Box bg="grey.100" py={[4, 5]}>
         <Cell px={3}>
           <Heading icon="about" mb={[3, 4]}>
@@ -53,7 +45,7 @@ const AboutSection = () => {
                 overflow="hidden"
                 width="100%"
               >
-                {/* <Image fluid={data.portrait2.nodes[0].fluid} width="100%" /> */}
+                <Image fluid={data.portrait1.childImageSharp.fluid} width="100%" />
               </Box>
             </Flex>
             <Box flexDirection="column" mt={2} pl={3} width={2 / 3}>

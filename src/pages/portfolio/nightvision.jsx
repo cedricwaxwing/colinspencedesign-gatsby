@@ -9,7 +9,6 @@ import { Text } from '@components/Text'
 import { OutboundLink } from '@components/Link'
 import { ProjectHeading, Shadow, Caption } from '@components/Portfolio'
 import '../../util/style/video.css'
-import { findAllByPlaceholderText } from '@testing-library/react'
 
 export default ({ data }) => {
   const entry = {
@@ -44,6 +43,7 @@ export default ({ data }) => {
           </Box>
         </Flex>
         <iframe
+          title="nightvision-banner-video"
           src="https://player.vimeo.com/video/393591090?autoplay=1&loop=1&background=1"
           frameBorder="0"
           allowFullScreen

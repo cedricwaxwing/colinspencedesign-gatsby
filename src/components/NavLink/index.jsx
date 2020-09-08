@@ -5,7 +5,7 @@ import { withTheme } from 'styled-components'
 
 import { AniLink, Link } from '@components/Link'
 import { Box } from '@components/Grid'
-import { Text } from '@components/Text'
+// import { Text } from '@components/Text'
 import typography from '../../../config/typography'
 
 const NavLink = ({ linkTo, mr, children, path, ...props }) => {
@@ -33,7 +33,6 @@ const NavLink = ({ linkTo, mr, children, path, ...props }) => {
         <AniLink
           paintDrip
           duration={0.5}
-          color={`${themeGet('colors.grey.900', 'black')(props)}`}
           from="nav"
           to={linkTo}
           color="grey.900"

@@ -1,7 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout } from '@components/Layout'
-import { SEO } from '@components/SEO'
 import { Box, Flex } from '@components/Grid'
 import PortfolioProject from '../../templates/project'
 import Cell from '@components/Cell'

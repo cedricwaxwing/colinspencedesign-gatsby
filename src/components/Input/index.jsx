@@ -1,6 +1,5 @@
 import React from 'react'
 import css from '@styled-system/css'
-import themeGet from '@styled-system/theme-get'
 import { color, layout, space } from 'styled-system'
 
 const Input = props => (

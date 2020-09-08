@@ -2,10 +2,9 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Cell from '@components/Cell'
-import { Box, Flex } from '@components/Grid'
+import { Flex } from '@components/Grid'
 import Heading from '@components/Heading'
 import Target from '@components/Target'
-import { Text } from '@components/Text'
 import WorkCard from '@components/WorkCard'
 
 const Projects = () => {
