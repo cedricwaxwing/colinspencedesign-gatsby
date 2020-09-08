@@ -7,7 +7,7 @@
           "stage": "develop",
           "options": {
             "plugins": [],
-            "displayName": false,
+            "displayName": true,
             "fileName": false,
             "ssr": false
           }
@@ -17,29 +17,29 @@
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
-            "autoLabel": false,
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": []
           }
@@ -57,15 +57,15 @@
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -73,7 +73,7 @@
           "stage": "develop-html",
           "options": {
             "plugins": [],
-            "displayName": false,
+            "displayName": true,
             "fileName": false,
             "ssr": false
           }
@@ -81,15 +81,15 @@
       ],
       "presets": [
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
-            "autoLabel": false,
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": []
           }
@@ -107,15 +107,15 @@
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -123,7 +123,7 @@
           "stage": "build-html",
           "options": {
             "plugins": [],
-            "displayName": false,
+            "displayName": true,
             "fileName": false,
             "ssr": true
           }
@@ -131,15 +131,15 @@
       ],
       "presets": [
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
-            "autoLabel": false,
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": []
           }
@@ -157,15 +157,15 @@
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -173,7 +173,7 @@
           "stage": "build-javascript",
           "options": {
             "plugins": [],
-            "displayName": false,
+            "displayName": true,
             "fileName": false,
             "ssr": true
           }
@@ -181,15 +181,15 @@
       ],
       "presets": [
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
-            "autoLabel": false,
+            "sourceMap": true,
+            "autoLabel": true,
             "plugins": []
           }
         },
         {
-          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/spencec6/Sites/projects/colinspencedesign-gatsby-2/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": []
           }

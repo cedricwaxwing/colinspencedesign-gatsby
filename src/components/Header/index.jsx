@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Arrow from '../../images/arrow.inline.svg'
 
 import { Link } from '@components/Link'
 import { Box, Flex } from '@components/Grid'
-import { Text } from '@components/Text'
 import Logo from '@components/Logo'
 import NavLink from '@components/NavLink'
 
@@ -66,25 +64,6 @@ class Header extends React.Component {
           >
             <Logo width={this.state.isFixed ? 30 : 50} />
           </Link>
-          {/* {this.state.isFixed ? 
-            <Flex display={['none','none','flex']} position="absolute" left="50%" alignItems="center" css={{transform: "translateX(-50%)"}}>
-              <Link
-                fontSize={5}
-                fontFamily="Barlow, sans-serif"
-                underlined="false"
-                to={`/portfolio/${this.props.prev}`}
-                css={{transform: 'rotate(180deg)'}}
-              >
-                <Arrow width="24px" height="24px"/>
-              </Link>
-              <Text mx={4}>{projects[this.props.current]}</Text>
-              <Link fontSize={5} fontFamily="Barlow, sans-serif" underlined="false" to={`/portfolio/${this.props.next}`}>
-                <Arrow width="24px" height="24px"/>
-              </Link>
-            </Flex> 
-            :
-            null
-          } */}
           <Flex alignItems="baseline">
             <NavLink path={this.props.path} linkTo="/#work" mr={3}>
               Work

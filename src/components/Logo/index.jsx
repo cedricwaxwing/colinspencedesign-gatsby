@@ -71,7 +71,7 @@ class Logo extends React.Component {
     window.addEventListener('resize', this.handleWindowSizeChange)
   }
 
-  componentWillUnMount() {
+  componentWillUnmount() {
     this.logo.removeEventListener('mouseover', this.animateLogo)
     this.logo.removeEventListener('mouseout', this.quitLogoAnimation)
     window.removeEventListener('resize', this.handleWindowSizeChange)

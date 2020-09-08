@@ -1,3 +1,4 @@
+import React from 'react'
 import tw, { styled } from 'twin.macro'
 import typography from '../../../config/typography'
 import { Box } from '@components/Grid'

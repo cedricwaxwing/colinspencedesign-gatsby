@@ -53,7 +53,7 @@ const AboutSection = () => {
                 overflow="hidden"
                 width="100%"
               >
-                <Image fluid={data.portrait2.nodes[0].fluid} width="100%" />
+                {/* <Image fluid={data.portrait2.nodes[0].fluid} width="100%" /> */}
               </Box>
             </Flex>
             <Box flexDirection="column" mt={2} pl={3} width={2 / 3}>

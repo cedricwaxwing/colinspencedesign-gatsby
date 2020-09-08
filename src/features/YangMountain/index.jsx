@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Cell from '@components/Cell'
 import Image from '@components/Image'
 import ChestLocked from '../../../static/images/yang-mountain/chest--locked.png'
