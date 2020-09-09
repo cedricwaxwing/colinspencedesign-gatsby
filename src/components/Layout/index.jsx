@@ -27,6 +27,7 @@ const Layout = ({ children, prev, current, next, path }) => (
         With help along the way from all of
         {` `}
         <Link
+          fontSize={1}
           from="footer"
           to="/finefolks"
           color="grey.200"

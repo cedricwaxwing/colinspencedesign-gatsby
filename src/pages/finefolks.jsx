@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { Box } from '@components/Grid'
 import { Layout } from '@components/Layout'
 import Cell from '@components/Cell'
@@ -8,6 +9,11 @@ import { Text } from '@components/Text'
 const FineFolks = () => {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Fine Folks | Colin Spence Design</title>
+        <link rel="canonical" href={`https://colinspencedesign.com/finefolks`} />
+      </Helmet>
       <Box px={[3, 5, 3]}>
         <Cell maxWidth="650px" py={6} overflowX="hidden">
           <ProjectHeading>
