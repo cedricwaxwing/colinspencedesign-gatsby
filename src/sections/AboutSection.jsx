@@ -30,7 +30,6 @@ const AboutSection = () => {
   `)
   return (
     <Target id="about">
-      {console.log(data)}
       <Box bg="grey.100" py={[4, 5]}>
         <Cell px={3}>
           <Heading icon="about" mb={[3, 4]}>

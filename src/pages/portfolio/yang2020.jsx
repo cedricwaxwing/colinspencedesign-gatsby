@@ -111,7 +111,7 @@ export default ({ data }) => {
       </Box>
       <Box px={4} mt={4}>
         <Cell maxWidth="512px">
-          <Text as="p" fontSize={2} lineHeight="1.75">
+          <Text as="p" lineHeight="1.75">
             Yang's 2020 presidential democratic campaign was like no other in
             the history of presidential campaigns. Starting out with 0 name
             recognition, he started as a "longer-than-long-shot" (New York
@@ -124,7 +124,7 @@ export default ({ data }) => {
               4th place in national polls.
             </OutboundLink>
           </Text>
-          <Text as="p" mt={4} fontSize={2} lineHeight="1.75">
+          <Text as="p" mt={4} lineHeight="1.75">
             Working with the campaign for the first 3 quarters of 2019, I was
             able to put my design skills to work, and help bolster Yang from 0
             to hero.
@@ -134,7 +134,7 @@ export default ({ data }) => {
           <Shadow>
             <Image width="100%" fluid={data.website.childImageSharp.fluid} />
           </Shadow>
-          <Caption mt={3}>Landing Page Mockup</Caption>
+          <Caption mt={3} textTransform="uppercase">Landing Page Mockup</Caption>
         </Cell>
       </Box>
       <Box bg="grey.100" px={4} py={5} mt={5}>
@@ -153,9 +153,11 @@ export default ({ data }) => {
               )
             })}
           </Flex>
+          <Caption mt={3} textTransform="uppercase">Various Social Graphics</Caption>
         </Cell>
       </Box>
       <YangMountain />
+      <Caption mt={3} textTransform="uppercase">Q3 Progress Bar - Design and Development</Caption>
     </PortfolioProject>
   )
 }

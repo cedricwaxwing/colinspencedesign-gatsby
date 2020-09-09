@@ -66,7 +66,7 @@ export default ({ data }) => {
             textTransform="uppercase"
             letterSpacing="4px"
           >
-            And all the owl puns
+            And owl the puns
           </Text>
           <Flex flexWrap="wrap" mx={-4}>
             {data.owlustrations.edges.map((owl, index) => {

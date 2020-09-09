@@ -15,7 +15,7 @@ export default ({ data }) => {
     slug: 'nightvision',
     title: 'Night Vision',
     link: {
-      url: 'https://www.nightvisionmuisc.ca',
+      url: 'https://www.nightvisionmusic.com',
       name: 'See More',
     },
     thumbnail: data.logo.childImageSharp.fluid,

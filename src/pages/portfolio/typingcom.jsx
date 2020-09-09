@@ -86,7 +86,7 @@ export default ({ data }) => {
             Ethos Logos & Pathos
           </Text>
         </Cell>
-        <Cell maxWidth="650px" mt={5}>
+        <Cell maxWidth="650px" mt={4}>
           <Text as="p" fontSize={3} lineHeight="1.75">
             At the beginning of 2018, the team at
             {` `}

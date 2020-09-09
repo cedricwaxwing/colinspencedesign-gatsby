@@ -22,6 +22,10 @@ const Button = styled('button')(
     textTransform: 'uppercase',
     transition: 'background-color 0.12s ease-in-out',
     whiteSpace: 'nowrap',
+    '&:focus': {
+      outline: 0,
+      boxShadow: `0 0 0 3px #7ece18`
+    }
   },
   border,
   buttonStyle,
