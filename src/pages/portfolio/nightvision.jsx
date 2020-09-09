@@ -35,7 +35,7 @@ export default ({ data }) => {
           position="absolute"
           zIndex="1"
         >
-          <Box width="350px">
+          <Box width={["150px","250px","350px"]}>
             <Image
               fluid={data.logoInverse.childImageSharp.fluid}
               width="100%"
@@ -55,7 +55,7 @@ export default ({ data }) => {
             <Box
               height={1}
               width="100%"
-              display="inline-block"
+              display={['none','none','inline-block']}
               verticalAlign="middle"
               ml="-100%"
               mr={4}
@@ -65,7 +65,7 @@ export default ({ data }) => {
             <Box
               height={1}
               width="100%"
-              display="inline-block"
+              display={['none','none','inline-block']}
               verticalAlign="middle"
               mr="-100%"
               ml={4}
@@ -78,7 +78,7 @@ export default ({ data }) => {
             mt={1}
             color="grey.700"
             verticalAlign="middle"
-            textAlign="center"
+            textAlign={["left","left","center"]}
             textTransform="uppercase"
             letterSpacing="4px"
           >
@@ -88,12 +88,12 @@ export default ({ data }) => {
       </Box>
       <Box px={4} mt={4}>
         <Cell maxWidth="512px">
-          <Text as="p" fontSize={2} lineHeight="1.75">
-            Night Vision was focused on engaging various sectors of the art
+          <Text as="p" lineHeight="1.75">
+            Night Vision is focused on engaging various sectors of the art
             community in order to push the power of positive artistic expression
             to the community and beyond.
           </Text>
-          <Text as="p" mt={4} fontSize={2} lineHeight="1.75">
+          <Text as="p" mt={4} lineHeight="1.75">
             After more than 200 shows in the past 7 years, Night Vision is still
             a pillar of not only the Edmonton music scene, but on the forefront
             of Canadian electronic music.

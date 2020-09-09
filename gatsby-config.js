@@ -68,6 +68,10 @@ module.exports = {
             family: `Barlow Condensed`,
             variants: [`400`, `500`, `600`, `700`],
           },
+          {
+            family: `Roboto Mono`,
+            variants: [`500`],
+          },
         ],
       },
     },

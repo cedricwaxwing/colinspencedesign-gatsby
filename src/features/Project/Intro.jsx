@@ -31,6 +31,7 @@ const Intro = ({ entry }) => {
             color="grey.700"
             fontSize={8}
             letterSpacing="4px"
+            lineHeight="1"
             textTransform="uppercase"
           >
             {entry.title}
@@ -42,7 +43,7 @@ const Intro = ({ entry }) => {
               width="100%"
               mt={3}
             >
-              <Flex flexWrap="wrap" mt={3}>
+              <Flex flexWrap="wrap" flexDirection={["column","row"]} mt={3}>
                 {entry.tags.map((tag, index) => {
                   return index !== entry.tags.length - 1 ? (
                     <React.Fragment key={`fragment-${index}`}>
@@ -61,6 +62,7 @@ const Intro = ({ entry }) => {
                       <Text
                         key={`${index}-line`}
                         color="grey.300"
+                        display={["none","block"]}
                         fontSize={3}
                         fontFamily={typography.options.headerFontFamily.toString()}
                         fontWeight="500"

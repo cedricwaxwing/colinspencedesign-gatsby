@@ -32,7 +32,7 @@ const ContactSection = () => {
         fontSize={1}
         letterSpacing="caps"
         mt={2}
-        textAlign="center"
+        textAlign={["left","left","center"]}
         css={{ textTransform: 'uppercase' }}
       >
         Let's Chat!
@@ -42,7 +42,7 @@ const ContactSection = () => {
           <Box width={[1, 1 / 2, 1 / 3]} pr={3} mt={3}>
             <Box>
               <OutboundLink
-                display="inline-block"
+                display={['none','none','inline-block']}
                 from="contact"
                 to={`mailto:${email}`}
               >
@@ -51,7 +51,7 @@ const ContactSection = () => {
             </Box>
             <Box>
               <OutboundLink
-                display="inline-block"
+                display={['none','none','inline-block']}
                 from="contact"
                 mt={3}
                 to={`tel:1-${phone.replace('(', '').replace(') ', '-')}`}

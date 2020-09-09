@@ -40,7 +40,7 @@ export default ({ data }) => {
             <Box
               height={1}
               width="100%"
-              display="inline-block"
+              display={['none','none','inline-block']}
               verticalAlign="middle"
               ml="-100%"
               mr={4}
@@ -50,7 +50,7 @@ export default ({ data }) => {
             <Box
               height={1}
               width="100%"
-              display="inline-block"
+              display={['none','none','inline-block']}
               verticalAlign="middle"
               mr="-100%"
               ml={4}
@@ -63,7 +63,7 @@ export default ({ data }) => {
             mt={1}
             color="grey.700"
             verticalAlign="middle"
-            textAlign="center"
+            textAlign={["left","left","center"]}
             textTransform="uppercase"
             letterSpacing="4px"
           >
@@ -73,13 +73,13 @@ export default ({ data }) => {
       </Box>
       <Box px={4} mt={4}>
         <Cell maxWidth="512px">
-          <Text as="p" fontSize={2} lineHeight="1.75">
+          <Text as="p" lineHeight="1.75">
             When I met with Shannon and her team, she had already done a lot of
             work on shaping the voice and tone of the brand, so I helped guide
             her through that process until we had a clear voice and tone that
             could start to be articulated through a visual identity.
           </Text>
-          <Text as="p" mt={4} fontSize={2} lineHeight="1.75">
+          <Text as="p" mt={4} lineHeight="1.75">
             The Hooligan's unique voice and brand has been a massive success,
             and within just a few days of launching their first client video for
             Lindsey Must Go, they had

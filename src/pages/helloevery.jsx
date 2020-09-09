@@ -23,7 +23,7 @@ const EveryOrg = () => {
             <Box
               height={1}
               width="100%"
-              display="inline-block"
+              display={['none','none','inline-block']}
               verticalAlign="middle"
               ml="-100%"
               mr={4}
@@ -33,7 +33,7 @@ const EveryOrg = () => {
             <Box
               height={1}
               width="100%"
-              display="inline-block"
+              display={['none','none','inline-block']}
               verticalAlign="middle"
               mr="-100%"
               ml={4}
@@ -46,7 +46,7 @@ const EveryOrg = () => {
             mt={1}
             color="grey.700"
             verticalAlign="middle"
-            textAlign="center"
+            textAlign={["left","left","center"]}
             textTransform="uppercase"
             letterSpacing="4px"
           >

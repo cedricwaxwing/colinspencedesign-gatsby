@@ -5,7 +5,7 @@ import { Box } from '@components/Grid'
 import { Text } from '@components/Text'
 
 const ProjectHeading = styled.h2`
-  ${tw`mb-0 text-5xl leading-none tracking-wide text-center text-gray-600 uppercase align-middle`}
+  ${tw`mb-0 text-5xl leading-none tracking-wide text-gray-600 uppercase align-middle md:text-center`}
 `
 
 const Shadow = styled(Box)`

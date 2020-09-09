@@ -9,7 +9,7 @@ const Heading = ({ icon, children, ...props }) => {
       <Text
         as="h1"
         color="grey.700"
-        fontSize={[5, 6, 8]}
+        fontSize={[7, 8]}
         mb={[2, 3]}
         textAlign="center"
         css={{

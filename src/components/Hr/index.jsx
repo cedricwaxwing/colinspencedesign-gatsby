@@ -8,7 +8,7 @@ const Hr = props => (
       alignItems="center"
       justifyContent="center"
       overflow="hidden"
-      textAlign="center"
+      textAlign={["left","left","center"]}
     >
       <Box
         borderBottom="1px solid"
