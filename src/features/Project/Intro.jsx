@@ -17,6 +17,7 @@ const Intro = ({ entry }) => {
           width={[1, 1, 1 / 2]}
           bg="transparent"
           p={2}
+          height={["300px", "300px", "auto"]}
         >
           <Image
             fluid={entry.thumbnail}
@@ -29,7 +30,7 @@ const Intro = ({ entry }) => {
           <Text
             as="h1"
             color="grey.700"
-            fontSize={8}
+            fontSize={[7,8]}
             letterSpacing="4px"
             lineHeight="1"
             textTransform="uppercase"

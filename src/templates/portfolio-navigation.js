@@ -25,7 +25,6 @@ const PortfolioNavigation = props => {
               Previous
             </Button>
           </AniLink>
-          {console.log(`${themeGet('colors.primary.500', 'green')(props)}`)}
           <AniLink
             cover
             bg={`${themeGet('colors.primary.500', 'green')(props)}`}

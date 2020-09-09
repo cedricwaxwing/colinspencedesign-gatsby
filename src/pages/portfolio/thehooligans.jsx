@@ -119,7 +119,7 @@ export default ({ data }) => {
                 <Box
                   key={`gallery-${index}`}
                   width={[
-                    1,
+                    1 / (data.icons.edges.length/2),
                     1 / data.icons.edges.length,
                     1 / data.icons.edges.length,
                   ]}
