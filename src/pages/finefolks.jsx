@@ -14,7 +14,7 @@ const FineFolks = () => {
         <title>Fine Folks | Colin Spence Design</title>
         <link rel="canonical" href={`https://colinspencedesign.com/finefolks`} />
       </Helmet>
-      <Box px={[3, 5, 3]}>
+      <Box px={[3, 5, 3]} minHeight="100vh">
         <Cell maxWidth="650px" py={6} overflowX="hidden">
           <ProjectHeading>
             <Box

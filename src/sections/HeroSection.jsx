@@ -1,11 +1,12 @@
 import React from 'react'
 import HeroLogo from '../features/HeroLogo'
 import logoWordMark from '../images/logo-wordmark.svg'
+import Cell from '@components/Cell'
 import { Box, Flex } from '@components/Grid'
 import { Text } from '@components/Text'
 import typography from '../../config/typography'
 
-const HeroSection = () => (
+const HeroSection = ({isLive}) => (
   <Flex
     alignItems="center"
     bg="grey.100"
@@ -50,14 +51,17 @@ const HeroSection = () => (
         UX/UI and Web Design Specialist
       </Text>
     </Box>
-    <Box
+    <Cell
+      maxWidth="500px"
+      width="100%"
       zIndex="1"
-      px={[5, 5, 3]}
+      px={[4,3]}
       css={`
         pointer-events: none;
       `}
     >
       <img src={logoWordMark} alt="Colin Spence Design" width="100%" />
+      {isLive ? (
       <Text color="grey.700" fontSize={[3, 4]} textAlign="center" mt={2}>
         crafting beautiful, intuitive,{' '}
         <span
@@ -68,7 +72,10 @@ const HeroSection = () => (
           user&ndash;centric solutions
         </span>
       </Text>
-    </Box>
+      ) : (
+        <Text color="grey.700" fontSize={[3, 4]} textAlign="center" mt={2}>currently under construction</Text>
+      )}
+    </Cell>
     <HeroLogo />
   </Flex>
 )

@@ -20,7 +20,7 @@ export default ({ data }) => {
     thumbnail: data.thumbnail.childImageSharp.fluid,
     tags: ['Brand Design', 'Web Development', 'Illustration'],
     description:
-      "The Hooligans Agency is lead by the brilliant Shannon Fitzgerald (Creative Strategist for Rep. Adam Schiff, Video Director for Pete Buttigieg's 2020 campaign) and is perfectly poised to meet this moment where the line between culture and politics have never been so blurred. I created the agency's unique branding and entire website in just under a month's time.",
+      "The Hooligans, is a creative agency lead by the brilliant Shannon Fitzgerald (Creative Strategist for Rep. Adam Schiff, Video Director for Pete Buttigieg's 2020 campaign) and is perfectly poised to meet this moment where the line between culture and politics have never been so blurred. I created the agency's unique branding and entire website in just under a month's time.",
   }
 
   const stylescapes = [

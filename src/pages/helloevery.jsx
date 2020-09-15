@@ -53,13 +53,21 @@ const EveryOrg = ({data}) => {
               textTransform="uppercase"
               letterSpacing="4px"
             >
-              It's lovely to meet you <span role="img" aria-label="smile">😊</span>
+              Thanks for  <span role="img" aria-label="smile">😊</span>
             </Text>
             <Text as="p" lineHeight="1.75" mt={4}>
-              Every.org looks like a fantastic initiative that I would absolutely love to be a part of! Over the last 4 or 5 years, I’ve found that at many times, the world’s problems are just so daunting and the prospect of solving them all just becomes entirely overwhelming. The main way that I’ve combatted this feeling in the past has been to focus on one or two initiatives that I care strongly about (Universal Basic Income, Education). And while that has led to some incredible, unregrettable paths, I can’t help but feel like there is still so much out there left to do.
+              The world’s problems can sometimes feel so daunting and the prospect of solving them <i>all&nbsp;</i> becomes entirely overwhelming, and of course, this feeling has only been exasperated after becoming a father. The main way that I’ve overcome this feeling in the past has been to focus my skills and attention on one or two initiatives that I’m passionate about, such as working on Universal Basic Income pet projects which ultimately led to working on the 
+              {` `}<Link fontSize={3} to="/portfolio/yang2020">Yang 2020 campaign</Link>
+              , or empowering tens of millions of students across the world with the free educational product - 
+              {` `}<Link fontSize={3} to="/portfolio/yang2020">Typing.com.</Link>
             </Text>
             <Text as="p" lineHeight="1.75" mt={4}>
-              From a product perspective, I just love the fact that I can easily find charities and organizations that are aligned to my interests on Every.org. From a product designer perspective, I love the idea that I could use my skills, and focus my time and energy into building something that makes it easy for other people to do the same. I’m thrilled at this opportunity, and I hope you’ll enjoy looking through my portfolio. Thank you for your consideration.
+              While I’m very proud of these accomplishments, it was soon into my relatively 
+              {` `}<Link fontSize={3} to="/portfolio/granify">brief foray into management,</Link>
+              where I came to understand that we are exponentially more effective at reaching our desired goals when we can empower others around us. This is what an opportunity at every.org means to me – an opportunity to focus my time and skills to empower others around me and ultimately make the world a better place for my children to inherit.
+            </Text>
+            <Text as="p" lineHeight="1.75" mt={4}>
+              Over the last 6 years I’ve been championining various user-focused initiatives at the startups I've been working at. Most recently, I’ve advocated for every employee cycling onto customer service for one day a month at Teaching.com. That's gone so well that we’ve also made it so that the first 2 weeks of onboarding for all roles start with customer service so that the employees can get a solid understanding of the users’ perspective. Many of the features we’ve launched over the last couple years have been a result of our product team listening directly to our users’ problems, brainstorming solutions, creating fat-marker sketches through to Figma mockups and ultimately, fully developed solutions.
             </Text>
             <Flex justifyContent="center" width="100%">
               <Link mt={4} to="/#work" fontSize={3}>

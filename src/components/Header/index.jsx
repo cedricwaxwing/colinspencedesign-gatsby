@@ -64,17 +64,19 @@ class Header extends React.Component {
           >
             <Logo width={this.state.isFixed ? 30 : 50} />
           </Link>
-          <Flex alignItems="baseline">
-            <NavLink path={this.props.path} linkTo="/#work" mr={3}>
-              Work
-            </NavLink>
-            <NavLink path={this.props.path} linkTo="/#about" mr={3}>
-              About
-            </NavLink>
-            <NavLink path={this.props.path} linkTo="/#contact">
-              Contact
-            </NavLink>
-          </Flex>
+          {this.props.isLive ? (
+            <Flex alignItems="baseline">
+              <NavLink path={this.props.path} linkTo="/#work" mr={3}>
+                Work
+              </NavLink>
+              <NavLink path={this.props.path} linkTo="/#about" mr={3}>
+                About
+              </NavLink>
+              <NavLink path={this.props.path} linkTo="/#contact">
+                Contact
+              </NavLink>
+            </Flex>
+          ) : null}
         </Flex>
       </Box>
     )

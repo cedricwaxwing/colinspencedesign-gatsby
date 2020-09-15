@@ -10,12 +10,13 @@ import { ThemeProvider, theme } from '@style'
 
 const year = new Date().getFullYear()
 
-const Layout = ({ children, prev, current, next, path }) => (
+const Layout = ({ children, isLive, prev, current, next, path }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />
     <Header
       siteTitle="Gatsby Starter Styled"
       path={path}
+      isLive={isLive}
       prev={prev}
       current={current}
       next={next}

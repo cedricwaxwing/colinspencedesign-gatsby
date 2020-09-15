@@ -9,6 +9,17 @@ import { Text } from '@components/Text'
 import { OutboundLink } from '@components/Link'
 import { ProjectHeading, Shadow, Caption } from '@components/Portfolio'
 
+const Description = () => (
+  <div>
+    <Text as="p">
+      Andrew Yang, the American 2020 Democratic presidential candidate running with the flagship proposal known as the Freedom Dividend in the form of $1,000 monthly for every American over the age of 18. Yang believes that a Universal Basic Income is a necessary response to the rapid development of automation, which is increasingly leading to workforce challenges, and that job displacement by automation is what led to Donald Trump's election in 2016. More than 160 policy proposals are listed on his campaign website.
+    </Text>
+    <Text as="p" mt={3}>
+      Working with the campaign for the first 3 quarters of 2019, I was able to put my design skills to work, and help bolster Yang from a "longer-than-long-shot" (New York Times, February 2018), to 4th place in national polls.
+    </Text>
+  </div>
+)
+
 export default ({ data }) => {
   const entry = {
     slug: 'yang2020',
@@ -25,47 +36,8 @@ export default ({ data }) => {
     ],
     thumbnail: data.logo.childImageSharp.fluid,
     tags: ['Graphic Design', 'Web Development'],
-    description:
-      "Andrew Yang is an American 2020 Democratic presidential candidate running with the flagship proposal known as the Freedom Dividend in the form of $1,000 monthly for every American over the age of 18. Yang believes that a Universal Basic Income is a necessary response to the rapid development of automation, which is increasingly leading to workforce challenges, and that job displacement by automation is what led to Donald Trump's election in 2016. More than 160 policy proposals are listed on his campaign website.",
+    description: <Description/>
   }
-
-  // const socials = [
-  //   {
-  //     slug: 'juneteenth',
-  //     title: 'Juneteenth',
-  //     descriptions: [
-  //       "I wanted to draw emphasis to the fact that Juneteenth didn't take place until 900 days after the Emancipation Proclamation, so I opted for a visual representation of the days to create a more visceral effect.",
-  //     ],
-  //     fluid: data.socials.edges[0].node.childImageSharp.fluid,
-  //   },
-  //   {
-  //     slug: 'hierarchy',
-  //     title: "Mazlow's Hierarchy of Needs",
-  //     descriptions: [
-  //       'The idea here was to illustrate how $1000 a month could help transform the lives of people with a wide spectrum of needs, and ultimately move them towards a path of self-actualization.',
-  //       "Distilling a complex thought or idea into a small square can be quite the challenge, but Annie's amazing sketch work helped bolster this concept to the next level, and it was great to see such a positive response after this graphic was released.",
-  //     ],
-  //     fluid: data.socials.edges[1].node.childImageSharp.fluid,
-  //   },
-  //   {
-  //     slug: 'history',
-  //     title: 'A History of UBI',
-  //     descriptions: [
-  //       'The history of Universal Basic Income dates back much further than most people would imagine, and has drawn support from a wide spectrum of intelligent folks.',
-  //       'Creating a timeline in a square format graphic suitable for facebook/instagram was no simple task, and we ended up condensing a lot of the original design - but I am very happy with how it turned out, and I am happy to say I see this little graphic bouncing around various threads and group still to this day. ',
-  //     ],
-  //     fluid: data.socials.edges[2].node.childImageSharp.fluid,
-  //   },
-  //   {
-  //     slug: 'progressive',
-  //     title: 'Progressive Petition',
-  //     descriptions: [
-  //       "These icons helped communicate Yang's policies at a glance, but they also differentiated his brand.",
-  //       'I think I have created almost 100 icons similar to the ones included here. These were used throughout the campaign, and are still being used today.',
-  //     ],
-  //     fluid: data.socials.edges[3].node.childImageSharp.fluid,
-  //   },
-  // ]
 
   return (
     <PortfolioProject entry={entry} prev="typingcom" next="thehooligans">
@@ -111,30 +83,17 @@ export default ({ data }) => {
       </Box>
       <Box px={4} mt={4}>
         <Cell maxWidth="512px">
-          <Text as="p" lineHeight="1.75">
-            Yang's 2020 presidential democratic campaign was like no other in
-            the history of presidential campaigns. Starting out with 0 name
-            recognition, he started as a "longer-than-long-shot" (New York
-            Times, February 2018), but continued to gain momentum and worked his
-            way into{' '}
-            <OutboundLink
-              to="//emersonpolling.com/2019/09/24/warren-surges-biden-slips-and-sanders-steadies-three-way-dead-heat-for-the-nomination/"
-              target="_blank"
-            >
-              4th place in national polls.
-            </OutboundLink>
+          <Text as="p" mt={4}>
+            I was responsible for the design and the frontend implementation (html, css, and javascript) of the progress piece below. Illustration of the mountains and Yang were provided by{` `}
+            <OutboundLink>Launch Mode Design</OutboundLink> and implementation was handled by the team's web developer.
           </Text>
-          <Text as="p" mt={4} lineHeight="1.75">
-            Working with the campaign for the first 3 quarters of 2019, I was
-            able to put my design skills to work, and help bolster Yang from 0
-            to hero.
+          <Text as="p" mt={4}>
+            This feature worked so well that it helped Yang reach over $10 million in Q3, exceeding the previous quarter's funding by over 3 times, his largest fundraising growth during the campaign.
           </Text>
         </Cell>
-        <Cell maxWidth="800px" mt={5}>
-          <Shadow>
-            <Image width="100%" fluid={data.website.childImageSharp.fluid} />
-          </Shadow>
-          <Caption mt={3} textTransform="uppercase">Landing Page Mockup</Caption>
+        <Cell>
+          <YangMountain/>
+          <Caption mt={3} textTransform="uppercase">Q3 Progress Bar - Design and Development</Caption>
         </Cell>
       </Box>
       <Box bg="grey.100" px={4} py={5} mt={5}>
@@ -156,8 +115,14 @@ export default ({ data }) => {
           <Caption mt={3} textTransform="uppercase">Various Social Graphics</Caption>
         </Cell>
       </Box>
-      <YangMountain />
-      <Caption mt={3} textTransform="uppercase">Q3 Progress Bar - Design and Development</Caption>
+      <Box mt={4} px={4}>
+        <Cell maxWidth="800px" mt={5}>
+          <Shadow>
+            <Image width="100%" fluid={data.website.childImageSharp.fluid} />
+          </Shadow>
+          <Caption mt={3} textTransform="uppercase">Landing Page Mockup</Caption>
+        </Cell>
+      </Box>
     </PortfolioProject>
   )
 }
