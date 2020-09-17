@@ -23,7 +23,7 @@ module.exports = {
     headline: website.headline,
     author: website.author,
     twitter: website.twitter,
-    live: false,
+    live: true,
   },
   plugins: [
     `gatsby-plugin-emotion`,
