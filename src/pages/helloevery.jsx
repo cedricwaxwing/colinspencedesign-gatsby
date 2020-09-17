@@ -53,7 +53,7 @@ const EveryOrg = ({data}) => {
               textTransform="uppercase"
               letterSpacing="4px"
             >
-              Thanks for  <span role="img" aria-label="smile">😊</span>
+              Thanks for your consideration <span role="img" aria-label="smile">😊</span>
             </Text>
             <Text as="p" lineHeight="1.75" mt={4}>
               The world’s problems can sometimes feel so daunting and the prospect of solving them <i>all&nbsp;</i> becomes entirely overwhelming, and of course, this feeling has only been exasperated after becoming a father. The main way that I’ve overcome this feeling in the past has been to focus my skills and attention on one or two initiatives that I’m passionate about, such as working on Universal Basic Income pet projects which ultimately led to working on the 
@@ -63,7 +63,7 @@ const EveryOrg = ({data}) => {
             </Text>
             <Text as="p" lineHeight="1.75" mt={4}>
               While I’m very proud of these accomplishments, it was soon into my relatively 
-              {` `}<Link fontSize={3} to="/portfolio/granify">brief foray into management,</Link>
+              {` `}<Link fontSize={3} to="/portfolio/granify">brief foray into management,</Link>{` `}
               where I came to understand that we are exponentially more effective at reaching our desired goals when we can empower others around us. This is what an opportunity at every.org means to me – an opportunity to focus my time and skills to empower others around me and ultimately make the world a better place for my children to inherit.
             </Text>
             <Text as="p" lineHeight="1.75" mt={4}>
