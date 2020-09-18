@@ -52,7 +52,7 @@ const HeroSection = ({isLive}) => (
       </Text>
     </Box>
     <Cell
-      maxWidth="500px"
+      maxWidth="510px"
       width="100%"
       zIndex="1"
       px={[4,3]}
