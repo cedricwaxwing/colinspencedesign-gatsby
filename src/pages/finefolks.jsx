@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import { Box } from '@components/Grid'
 import { Layout } from '@components/Layout'
@@ -7,8 +8,20 @@ import { ProjectHeading } from '@components/Portfolio'
 import { Text } from '@components/Text'
 
 const FineFolks = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          live
+        }
+      }
+    }
+  `)
+
+  const isLive = data.site.siteMetadata.live;
+
   return (
-    <Layout>
+    <Layout isLive={isLive}>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Fine Folks | Colin Spence Design</title>

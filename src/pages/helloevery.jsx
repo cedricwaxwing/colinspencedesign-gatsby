@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Button from '@components/Button'
 import { Box, Flex } from '@components/Grid'
@@ -11,8 +12,11 @@ import { ProjectHeading } from '@components/Portfolio'
 import { Text } from '@components/Text'
 
 const EveryOrg = ({data}) => {
+
+  const isLive = data.site.siteMetadata.live;
+
   return (
-    <Layout>
+    <Layout isLive={isLive}>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Hello Every! | Colin Spence Design</title>
@@ -83,6 +87,11 @@ const EveryOrg = ({data}) => {
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        live
+      }
+    }
     helloevery: file(
       relativePath: { eq: "every-banner.png" }
     ) {
