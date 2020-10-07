@@ -3,14 +3,16 @@ import PropTypes from 'prop-types'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import { Link } from '@components/Link'
+import css from '@styled-system/css'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+
 import { Text } from '@components/Text'
 import GlobalStyles from '@style/GlobalStyles'
 import { ThemeProvider, theme } from '@style'
 
 const year = new Date().getFullYear()
 
-const Layout = ({ children, isLive, prev, current, next, path }) => (
+const Layout = ({ children, isLive, prev, current, next, path, props }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />
     <Header
@@ -27,15 +29,22 @@ const Layout = ({ children, isLive, prev, current, next, path }) => (
       <Text fontSize={1} color="grey.300">
         With help along the way from all of
         {` `}
-        <Link
+        <AniLink
+          paintDrip
+          duration={0.5}
           fontSize={1}
           from="footer"
           to="/finefolks"
           color="grey.200"
-          hovercolor="primary.300"
+          css={{
+            textDecoration: 'underline',
+            '&:hover': {
+              color: 'white',
+            },
+          }}
         >
           these mighty fine folks.
-        </Link>
+        </AniLink>
       </Text>
     </Footer>
   </ThemeProvider>

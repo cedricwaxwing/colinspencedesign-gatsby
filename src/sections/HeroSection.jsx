@@ -60,9 +60,11 @@ const HeroSection = ({isLive}) => (
         pointer-events: none;
       `}
     >
-      <img src={logoWordMark} alt="Colin Spence Design" width="100%" />
+      <Box width="100%" opacity="0"  css={{animation: 'fadeUpIn 0.5s ease-in-out forwards'}}>
+        <img src={logoWordMark} alt="Colin Spence Design" width="100%" />
+      </Box>
       {isLive ? (
-      <Text color="grey.700" fontSize={[3, 4]} textAlign="center" mt={2}>
+      <Text color="grey.700" fontSize={[3, 4]} textAlign="center" opacity="0" mt={2} css={{animation: 'fadeUpIn 0.5s 0.25s ease-in-out forwards'}}>
         crafting beautiful, intuitive,{' '}
         <span
           css={`
@@ -73,10 +75,12 @@ const HeroSection = ({isLive}) => (
         </span>
       </Text>
       ) : (
-        <Text color="grey.700" fontSize={[3, 4]} textAlign="center" mt={2}>currently under construction</Text>
+        <Text color="grey.700" fontSize={[3, 4]} textAlign="center" opacity="0" mt={2} css={{animation: 'fadeUpIn 0.5s 0.25s ease-in-out forwards'}}>currently under construction</Text>
       )}
     </Cell>
-    <HeroLogo />
+    <Box position="absolute" width="70vmin" height="70vmin" css={{animation: 'spin 4s 0.5s cubic-bezier(0.32, -0.4, 0.08, 1) forwards', transformOrigin: 'center'}}>
+      <HeroLogo />
+    </Box>
   </Flex>
 )
 

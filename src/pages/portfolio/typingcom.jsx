@@ -39,7 +39,13 @@ export default ({ data }) => {
       url: 'https://www.typing.com',
       name: 'See Typing.com',
     },
-    banner: data.desktopBanner.childImageSharp.fluid,
+    banners: [
+      data.mobileBanner.childImageSharp.fluid,
+      {
+        ...data.desktopBanner.childImageSharp.fluid,
+        media: `(min-width: 768px)`
+      }
+    ],
     thumbnail: data.thumbnail.childImageSharp.fluid,
     tags: ['Product Design', 'Web Development', 'Illustration'],
     description: <Description />,
@@ -48,9 +54,9 @@ export default ({ data }) => {
   return (
     <PortfolioProject entry={entry} prev="owlustrations" next="yang2020">
       <Box mt={6} mb={[3, 4]}>
-        <Image fluid={entry.banner} width="100%" />
+        <Image fluid={entry.banners} width="100%" />
       </Box>
-      <Box px={4} py={5} mt={5} bg="grey.100">
+      <Box px={4} py={5} mt={[2,5]} bg="grey.100">
         <Cell overflowX="hidden">
           <ProjectHeading>
             <Box
@@ -83,7 +89,7 @@ export default ({ data }) => {
             textTransform="uppercase"
             letterSpacing="4px"
           >
-            Ethos Logos & Pathos
+            Ethos, Logos & Pathos
           </Text>
         </Cell>
         <Cell maxWidth="650px" mt={4}>
@@ -265,6 +271,15 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
+    mobileBanner: file(
+      relativePath: { eq: "portfolio/1-typingcom/typingcom-banner-mobile.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 80) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
     desktopBanner: file(
       relativePath: { eq: "portfolio/1-typingcom/typingcom-banner.jpg" }
     ) {

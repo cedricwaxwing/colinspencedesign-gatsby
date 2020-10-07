@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import css from '@styled-system/css'
 import { theme } from '../../util/style/theme'
 import { color, layout } from 'styled-system'
 import typography from '../../../config/typography'
@@ -14,9 +15,14 @@ const LogoImage = props => (
       display: block;
       transform: ${props =>
         props.animateLogo ? 'rotateZ(360deg)' : 'rotateZ(0deg)'};
-      transition: width 0.12s ease-in-out,
-        transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: width 0.12s ease-in-out;
       z-index: 1;
+      ${props =>
+        css({
+          '&:hover': {
+            transition: 'width 0.12s ease-in-out, transform 1s cubic-bezier(0.32, -0.4, 0.08, 1)',
+          },
+        })}
       ${color}
       ${layout}
     `}
