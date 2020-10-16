@@ -23,7 +23,7 @@ module.exports = {
     headline: website.headline,
     author: website.author,
     twitter: website.twitter,
-    live: true,
+    live: false,
   },
   plugins: [
     `gatsby-plugin-emotion`,
@@ -114,5 +114,13 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-transition-link`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.colinspencedesign.com',
+        sitemap: 'https://www.colinspencedesign.com/sitemap.xml',
+        policy: [{ userAgent: '*', disallow: ['/helloevery','/hellobasecamp'] }]
+      }
+    }
   ],
 }
