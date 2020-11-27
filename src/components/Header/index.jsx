@@ -67,7 +67,7 @@ class Header extends React.Component {
           {this.props.isLive ? (
             <Flex alignItems="baseline">
               <NavLink path={this.props.path} linkTo="/#work" mr={3}>
-                Work
+                Portfolio
               </NavLink>
               <NavLink path={this.props.path} linkTo="/#about" mr={3}>
                 About

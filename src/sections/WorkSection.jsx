@@ -12,7 +12,7 @@ const Projects = () => {
     <Target id="work">
       <Cell px={3} my={[3, 4, 5]}>
         <Heading icon="work" my={[3, 4]}>
-          Work
+          Portfolio
         </Heading>
         <StaticQuery
           query={graphql`
