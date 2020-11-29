@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import GoogleAnalytics from 'react-ga'
 import css from '@styled-system/css'
-import { color, typography, layout, space } from 'styled-system'
+import { typography, layout, space } from 'styled-system'
 import GatsbyAniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const AniLink = props => (

@@ -30,17 +30,10 @@ class Header extends React.Component {
   }
 
   render() {
-    const projects = {
-      typingcom: 'Typing.com',
-      yang2020: 'Yang 2020',
-      thehooligans: 'The Hooligans',
-      nightvision: 'Night Vision',
-      granify: 'Granify',
-      owlustrations: 'Owlustrations',
-    }
     return (
       <Box
         as="header"
+        id="top"
         bg={this.state.isFixed ? 'white' : 'transparent'}
         px={3}
         py={this.state.isFixed ? 2 : 3}

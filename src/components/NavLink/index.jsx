@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import themeGet from '@styled-system/theme-get'
 import { withTheme } from 'styled-components'
 
 import { AniLink, Link } from '@components/Link'

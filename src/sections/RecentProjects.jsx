@@ -4,10 +4,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import Button from '@components/Button'
 import Cell from '@components/Cell'
 import { Box, Flex } from '@components/Grid'
-import { OutboundLink } from '@components/Link'
+import { Link } from '@components/Link'
 import { Text } from '@components/Text'
 import Target from '@components/Target'
-import DribbbleCard from '../components/DribbbleCard'
+import BlogCard from '../components/BlogCard'
 
 const RecentProjects = () => {
   return (
@@ -18,7 +18,7 @@ const RecentProjects = () => {
           <StaticQuery
             query={graphql`
               query recentProjectsQuery {
-                allDribbbleShot(limit: 6) {
+                allDribbbleShot(sort: {order: DESC, fields: published}, limit: 6) {
                   nodes {
                     title
                     url
@@ -35,9 +35,9 @@ const RecentProjects = () => {
               >
                 {allDribbbleShot.nodes.map((project, index) => {
                   return (
-                    <DribbbleCard
+                    <BlogCard
                       key={project.id}
-                      url={project.url}
+                      id={project.id}
                       title={project.title}
                       src={project.cover}
                       width={["100%","50%","33.3333%"]}
@@ -50,9 +50,9 @@ const RecentProjects = () => {
             )}
           ></StaticQuery>
           <Flex justifyContent="center" mt={3}>
-            <OutboundLink to="https://www.dribbble.com/colinspencedesign" target="_blank">
+            <Link to="/blog">
               <Button >See All Projects</Button>
-            </OutboundLink>
+            </Link>
           </Flex>
         </Cell>
       </Box>

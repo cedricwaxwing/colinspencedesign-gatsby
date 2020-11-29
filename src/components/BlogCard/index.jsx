@@ -1,20 +1,22 @@
 import React from 'react'
 import css from '@styled-system/css'
-import { withTheme, themeGet} from 'styled-components'
+import { withTheme } from 'styled-components'
 import { Box , Flex } from '@components/Grid'
 import { Text } from '@components/Text'
-import { OutboundLink } from '@components/Link'
+import { Link } from '@components/Link'
 
-const DribbbleCard = props => {
+const BlogCard = props => {
   const showCard = []
-  props.initialNumberVisible.forEach((screenNumber) => {
-    showCard.push(props.index < screenNumber ? 'block' : 'none')
-  })
-  console.log(showCard)
+  if(props.initialNumberVisible) {
+    props.initialNumberVisible.forEach((screenNumber) => {
+      showCard.push(props.index < screenNumber ? 'block' : 'none')
+    })
+  }
+
   return (
     <Box
       as="figure"
-      display={showCard}
+      display={showCard ? showCard : 'block'}
       my={2} 
       px={2}
       {...props}
@@ -43,10 +45,10 @@ const DribbbleCard = props => {
           })}
       `}
       >
-        <OutboundLink
-          underlined={0}
+        <Link
+          underlined="false"
           from={`/#recent-work`}
-          to={props.url}
+          to={`/blog/${props.id}`}
         >
           <img src={props.src} alt={props.title} width="100%" css={{transition: "transform 0.25s ease-in-out"}}/>
           <Flex 
@@ -83,14 +85,14 @@ const DribbbleCard = props => {
                 {props.title}
               </Text>
           </Flex>
-        </OutboundLink>
+        </Link>
       </Box>
     </Box>
   )
 }
 
-DribbbleCard.propTypes = {}
+BlogCard.propTypes = {}
 
-DribbbleCard.defaultProps = {}
+BlogCard.defaultProps = {}
 
-export default withTheme(DribbbleCard)
+export default withTheme(BlogCard)
