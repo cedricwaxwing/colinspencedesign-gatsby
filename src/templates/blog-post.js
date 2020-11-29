@@ -76,27 +76,25 @@ export default ({ children, ...props }) => {
         >
           Related Projects
         </Text>
-        <Flex flexwrap="wrap" alignItems="center" justifyContent="center" my={4}>
-          <BlogCard
-            key={previousProject.id}
-            id={previousProject.id}
-            title={previousProject.title}
-            src={previousProject.cover}
-            width={["100%","50%","33.3333%"]}
-            initialNumberVisible={[3,6,6]}
-            index={0}
-            mr={4}
-          />
-          <BlogCard
-            key={nextProject.id}
-            id={nextProject.id}
-            title={nextProject.title}
-            src={nextProject.cover}
-            width={["100%","50%","33.3333%"]}
-            initialNumberVisible={[3,6,6]}
-            index={1}
-          />
-        </Flex>
+          <Flex flexwrap="wrap" alignItems="center" justifyContent="center" my={4}>
+            <BlogCard
+              id={previousProject.id}
+              title={previousProject.title}
+              src={previousProject.cover}
+              width={["100%","50%","33.3333%"]}
+              initialNumberVisible={[3,6,6]}
+              index={0}
+              mr={4}
+            />
+            <BlogCard
+              id={nextProject.id}
+              title={nextProject.title}
+              src={nextProject.cover}
+              width={["100%","50%","33.3333%"]}
+              initialNumberVisible={[3,6,6]}
+              index={1}
+            />
+          </Flex>
       </Cell>
     </Layout>
   )

@@ -56,7 +56,9 @@ exports.createPages = ({ graphql, actions }) => {
         
         entries.forEach((entry, index) => {
           const previousProject = index === 0 ? entries[entries.length - 1] : entries[index-1];
-          const nextProject = index === entries.length - 1 ? entries[index+1] : entries[index+1];
+          const nextProject = index === entries.length - 1 ? entries[0] : entries[index+1];
+
+          if(!nextProject) {console.log(index, entries[0])}
 
           createPage({
             path: `/blog/${entry.id}/`,
