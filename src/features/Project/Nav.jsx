@@ -1,30 +1,32 @@
-import React from 'react'
-import themeGet from '@styled-system/theme-get'
-import { withTheme } from 'styled-components'
+import React from "react";
+import themeGet from "@styled-system/theme-get";
+import { withTheme } from "styled-components";
 
-import Button from '@components/Button'
-import Cell from '@components/Cell'
-import { Box, Flex } from '@components/Grid'
-import { AniLink } from '@components/Link'
+import Button from "@components/Button";
+import Cell from "@components/Cell";
+import { Box, Flex } from "@components/Grid";
+import { AniLink } from "@components/Link";
 
 const Nav = props => {
+
+  const type = props.type === 'blog' ? 'blog' : 'portfolio'
+
   return (
-    <Box bg="grey.800" px={4} mt={5}>
-      <Cell pt={5} pb={4} borderBottom="1px solid" borderBottomColor="grey.300">
+    <Box bg={type === 'blog' ? 'white' : 'grey.800'} px={3} mt={5}>
+      <Cell pt={type === 'blog' ? 0 : 5} pb={type === 'blog' ? 5 : 4} borderBottom="1px solid" borderBottomColor="grey.300">
         <Flex justifyContent="center">
           <AniLink
             cover
-            bg={`${themeGet('colors.primary.500', 'green')(props)}`}
+            bg={`${themeGet("colors.primary.500", "green")(props)}`}
             direction="left"
             duration={1}
             mr={4}
-            from={`/portfolio/${props.current}`}
-            to={`/portfolio/${props.prev}`}
+            from={`/${type}/${props.current}`}
+            to={`/${type}/${props.prev}`}
           >
             <Button
-              type="secondary"
+              type={type === 'blog' ? 'primary' : 'secondary'}
               width="150px"
-              type="inverse"
               p={2}
               fontSize={4}
             >
@@ -33,16 +35,15 @@ const Nav = props => {
           </AniLink>
           <AniLink
             cover
-            bg={`${themeGet('colors.primary.500', 'green')(props)}`}
+            bg={`${themeGet("colors.primary.500", "green")(props)}`}
             direction="right"
             duration={1}
-            from={`/portfolio/${props.current}`}
-            to={`/portfolio/${props.next}`}
+            from={`/${type}/${props.current}`}
+            to={`/${type}/${props.next}`}
           >
             <Button
-              type="secondary"
+              type={type === 'blog' ? 'primary' : 'secondary'}
               width="150px"
-              type="inverse"
               p={2}
               fontSize={4}
             >
@@ -52,7 +53,7 @@ const Nav = props => {
         </Flex>
       </Cell>
     </Box>
-  )
-}
+  );
+};
 
-export default withTheme(Nav)
+export default withTheme(Nav);

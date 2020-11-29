@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 
 import HeroSection from '../sections/HeroSection'
 import WorkSection from '../sections/WorkSection'
+import RecentProjects from '../sections/RecentProjects'
 import AboutSection from '../sections/AboutSection'
 import ContactSection from '../sections/ContactSection'
 
@@ -34,6 +35,7 @@ const IndexPage = ({ location }) => {
         (
           <div>
             <WorkSection />
+            <RecentProjects />
             <AboutSection />
             <ContactSection />
           </div>

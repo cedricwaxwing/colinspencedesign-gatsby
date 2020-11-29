@@ -1,21 +1,21 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import PortfolioProject from '../../templates/project'
-import { Box, Flex } from '@components/Grid'
-import { OutboundLink } from '@components/Link'
-import Cell from '@components/Cell'
-import Image from '@components/Image'
-import { Text } from '@components/Text'
-import SalesSiteVideo from '../../../static/images/typingcom-sales-site.mp4'
-import TeachersPageVideo from '../../../static/images/typingcom-teachers-opener.mp4'
-import ExtrasVideo from '../../../static/images/typingcom-fun-extras-2.mp4'
-import TeacherPortalVideo from '../../../static/images/typingcom-tp.mp4'
-import { ProjectHeading, Shadow } from '@components/Portfolio'
+import React from "react";
+import { graphql } from "gatsby";
+import PortfolioProject from "../../templates/project";
+import { Box, Flex } from "@components/Grid";
+import { OutboundLink } from "@components/Link";
+import Cell from "@components/Cell";
+import Image from "@components/Image";
+import { Text } from "@components/Text";
+import SalesSiteVideo from "../../../static/images/typingcom-sales-site.mp4";
+import TeachersPageVideo from "../../../static/images/typingcom-teachers-opener.mp4";
+import ExtrasVideo from "../../../static/images/typingcom-fun-extras-2.mp4";
+import TeacherPortalVideo from "../../../static/images/typingcom-tp.mp4";
+import { ProjectHeading, Shadow } from "@components/Portfolio";
 
 const Description = () => (
   <div>
     <Text as="p">
-      Over 39 million people use
+      Over 39 million people use Teaching.com's flagship product,
       {` `}
       <OutboundLink
         to="https://www.typing.com"
@@ -23,21 +23,21 @@ const Description = () => (
         target="_blank"
       >
         Typing.com
-      </OutboundLink>{' '}
+      </OutboundLink>{" "}
       to learn and teach typing around the world. Although Typing.com has been
       around for over a decade, my recent redesigns for the product create a
       more engaging, and intuitive experience for both students and teachers.
     </Text>
   </div>
-)
+);
 
 export default ({ data }) => {
   const entry = {
-    slug: 'typingcom',
-    title: 'Typing.com',
+    slug: "typingcom",
+    title: "Typing.com",
     link: {
-      url: 'https://www.typing.com',
-      name: 'See Typing.com',
+      url: "https://www.typing.com",
+      name: "See Typing.com"
     },
     banners: [
       data.mobileBanner.childImageSharp.fluid,
@@ -47,22 +47,22 @@ export default ({ data }) => {
       }
     ],
     thumbnail: data.thumbnail.childImageSharp.fluid,
-    tags: ['Product Design', 'Web Development', 'Illustration'],
-    description: <Description />,
-  }
+    tags: ["Product Design", "Web Development", "Illustration"],
+    description: <Description />
+  };
 
   return (
     <PortfolioProject entry={entry} prev="owlustrations" next="yang2020">
       <Box mt={6} mb={[3, 4]}>
         <Image fluid={entry.banners} width="100%" />
       </Box>
-      <Box px={4} py={5} mt={[2,5]} bg="grey.100">
+      <Box px={4} py={5} mt={[2, 5]} bg="grey.100">
         <Cell overflowX="hidden">
           <ProjectHeading>
             <Box
               height={1}
               width="100%"
-              display={['none','none','inline-block']}
+              display={["none", "none", "inline-block"]}
               verticalAlign="middle"
               ml="-100%"
               mr={4}
@@ -72,7 +72,7 @@ export default ({ data }) => {
             <Box
               height={1}
               width="100%"
-              display={['none','none','inline-block']}
+              display={["none", "none", "inline-block"]}
               verticalAlign="middle"
               mr="-100%"
               ml={4}
@@ -85,7 +85,7 @@ export default ({ data }) => {
             mt={1}
             color="grey.700"
             verticalAlign="middle"
-            textAlign={["left","left","center"]}
+            textAlign={["left", "left", "center"]}
             textTransform="uppercase"
             letterSpacing="4px"
           >
@@ -103,6 +103,7 @@ export default ({ data }) => {
             >
               Teaching.com
             </OutboundLink>
+            {` `}
             and I set out to completely redesign and redevelop the entire
             Typing.com platform in order to make the site more engaging, modern,
             fun, and easy to use. While I did work on certain integral segments
@@ -114,7 +115,7 @@ export default ({ data }) => {
               target="_blank"
             >
               student portal
-            </OutboundLink>{' '}
+            </OutboundLink>{" "}
             and
             {` `}
             <OutboundLink
@@ -123,7 +124,7 @@ export default ({ data }) => {
               target="_blank"
             >
               teacher portal
-            </OutboundLink>{' '}
+            </OutboundLink>{" "}
             in the redesign, my main focus was creating a brand new sales site
             for the platform. I was solely responsible for the content strategy,
             visual design and front-end implementation of the sales site.
@@ -195,7 +196,7 @@ export default ({ data }) => {
             <Box
               height={1}
               width="100%"
-              display={['none','none','inline-block']}
+              display={["none", "none", "inline-block"]}
               verticalAlign="middle"
               ml="-100%"
               mr={4}
@@ -205,7 +206,7 @@ export default ({ data }) => {
             <Box
               height={1}
               width="100%"
-              display={['none','none','inline-block']}
+              display={["none", "none", "inline-block"]}
               verticalAlign="middle"
               mr="-100%"
               ml={4}
@@ -218,7 +219,7 @@ export default ({ data }) => {
             mt={1}
             color="grey.700"
             verticalAlign="middle"
-            textAlign={["left","left","center"]}
+            textAlign={["left", "left", "center"]}
             textTransform="uppercase"
             letterSpacing="4px"
           >
@@ -266,8 +267,8 @@ export default ({ data }) => {
         </Cell>
       </Box>
     </PortfolioProject>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -319,4 +320,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

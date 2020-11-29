@@ -1,13 +1,6 @@
 import React from 'react'
-// import { VelocityComponent } from 'velocity-react'
-
-// import { keyframes } from 'styled-components'
 import { color, layout } from 'styled-system'
-// import logo from '../../images/logomark.svg'
-// import { Box } from '@components/Grid'
 import { Icon } from '@components/Icons'
-// import Image from '@components/Image'
-// require('velocity-animate/velocity.ui')
 
 class HeroLogo extends React.Component {
   constructor(props) {
@@ -27,7 +20,7 @@ class HeroLogo extends React.Component {
   }
 
   render() {
-    let animationProps
+    let animationProps = {};
     if (this.state.hovering) {
       animationProps = {
         easing: 'linear',
@@ -50,10 +43,6 @@ class HeroLogo extends React.Component {
       }
     }
     return (
-      // <VelocityComponent
-      //   ref={node => (this.logoMark = node)}
-      //   {...animationProps}
-      // >
         <Icon
           variant="logo"
           onMouseEnter={this.animateLogo}

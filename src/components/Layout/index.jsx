@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import css from '@styled-system/css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import { Text } from '@components/Text'

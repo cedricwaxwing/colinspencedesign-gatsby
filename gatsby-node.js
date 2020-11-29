@@ -23,55 +23,54 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
-//   return new Promise((resolve, reject) => {
-//     const portfolioEntry = path.resolve('src/templates/portfolio-project.js')
+  return new Promise((resolve, reject) => {
+    const blogPost = path.resolve('src/templates/blog-post.js')
 
-//     resolve(
-//       graphql(
-//         `
-//           {
-//             allContentfulPortfolioProject {
-//               edges {
-//                 node {
-//                   title
-//                   slug
-//                   displayOrder
-//                 }
-//               }
-//             }
-//           }
-//         `
-//       ).then(result => {
-//         if (result.errors) {
-//           console.log(result.errors)
-//           reject(result.errors)
-//         }
+    resolve(
+      graphql(
+        `
+        {
+          allDribbbleShot {
+            nodes {
+              title
+              url
+              cover
+              id
+              description
+              published
+              tags
+            }
+          }
+        }
+        `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
 
-//         const entries = result.data.allContentfulPortfolioProject.edges
-//         entries.forEach((entry, index) => {
-//           const nextPage =
-//             entry.node.displayOrder === entries.length
-//               ? 1
-//               : entry.node.displayOrder + 1
-//           const previousPage =
-//             entry.node.displayOrder === 1
-//               ? entries.length
-//               : entry.node.displayOrder - 1
+        const entries = result.data.allDribbbleShot.nodes
+        
+        entries.forEach((entry, index) => {
+          const previousProject = index === 0 ? entries[entries.length - 1] : entries[index-1];
+          const nextProject = index === entries.length - 1 ? entries[0] : entries[index+1];
 
-//           createPage({
-//             path: `/portfolio/${entry.node.slug}/`,
-//             component: portfolioEntry,
-//             context: {
-//               slug: entry.node.slug,
-//               nextPage: nextPage,
-//               previousPage: previousPage,
-//             },
-//           })
-//         })
-//       })
-//     )
-//   })
-// }
+          if(!nextProject) {console.log(index, entries[0])}
+
+          createPage({
+            path: `/blog/${entry.id}/`,
+            component: blogPost,
+            context: {
+              entry: entry,
+              previousProject: previousProject,
+              nextProject: nextProject,
+            },
+          })
+        })
+      })
+    )
+  })
+}

@@ -15,7 +15,7 @@ const PortfolioNavigation = props => {
           <AniLink
             cover
             bg={`${themeGet('colors.primary.500', 'green')(props)}`}
-            direction="left"
+            direction="right"
             duration={1}
             mr={3}
             from={`/portfolio/${props.current}`}
@@ -28,7 +28,7 @@ const PortfolioNavigation = props => {
           <AniLink
             cover
             bg={`${themeGet('colors.primary.500', 'green')(props)}`}
-            direction="right"
+            direction="left"
             duration={1}
             from={`/portfolio/${props.current}`}
             to={`/portfolio/${props.next}`}
