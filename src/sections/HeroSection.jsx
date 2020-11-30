@@ -63,7 +63,7 @@ const HeroSection = ({isLive}) => {
       <Box
         bottom={0}
         position="absolute"
-        right={3}
+        right={2}
         className="rotated-text"
         css={`
           transform: rotate(90deg);
@@ -80,31 +80,32 @@ const HeroSection = ({isLive}) => {
         </Text>
       </Box>
       <Cell
-        maxWidth="510px"
+        maxWidth="600px"
         width="100%"
         zIndex="1"
         px={[4,3]}
-        css={`
-          pointer-events: none;
-        `}
       >
-        <Box width="100%" opacity="0"  css={{animation: 'fadeUpIn 0.5s ease-in-out forwards'}}>
+        <Box width="100%" mx="auto" maxWidth="510px" opacity="0"  css={{animation: 'fadeUpIn 0.5s ease-in-out forwards'}}>
           <img src={logoWordMark} alt="Colin Spence Design" width="100%" />
         </Box>
+        <Text color="grey.700" fontWeight="700" textAlign="center" opacity="0" mt={3} lineHeight={["1.25","1"]} fontSize={[4,5]} css={{animation: 'fadeUpIn 0.5s 0.25s ease-in-out forwards', transition: 'color 0.75s ease-in-out', cursor: isLive ? `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>✨</text></svg>") 16 0,auto; /*!emojicursor.app*/` : 'default', '&:hover': {color: isLive ? '#7ece18' : null}}}>
         {isLive ? (
-        <Text color="grey.700" fontSize={[3, 4]} textAlign="center" opacity="0" mt={2} css={{animation: 'fadeUpIn 0.5s 0.25s ease-in-out forwards'}}>
-          crafting beautiful, intuitive,{' '}
-          <span
-            css={`
-              white-space: nowrap;
-            `}
-          >
-            user&ndash;centric solutions
+          <span>
+            Fresh thinking meets
+            <span
+              css={`
+                white-space: nowrap;
+              `}
+            >
+              {` `}user&ndash;focused design magic.
+            </span>
           </span>
-        </Text>
         ) : (
-          <Text color="grey.700" fontSize={[3, 4]} textAlign="center" opacity="0" mt={2} css={{animation: 'fadeUpIn 0.5s 0.25s ease-in-out forwards'}}>currently under construction</Text>
+          <span>
+            Currently under construction.
+          </span>
         )}
+        </Text>
       </Cell>
       <Box position="absolute" width="70vmin" height="70vmin" css={{animation: 'spin 4s 0.5s cubic-bezier(0.32, -0.4, 0.08, 1) forwards', transformOrigin: 'center'}}>
         <HeroLogo />

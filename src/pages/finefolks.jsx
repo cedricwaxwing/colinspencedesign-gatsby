@@ -76,7 +76,7 @@ const FineFolks = () => {
             </Box>
             <Box as="li">
               <Text fontSize={2}>
-                <strong><span role="img" aria-label="love-face">😍</span> Charlotte Spence - </strong>
+                <strong><span role="img" aria-label="love-face">😍</span> Charlotte/Bennett Spence - </strong>
                 You're my motivation and inspiration
               </Text>
             </Box>

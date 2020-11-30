@@ -23,7 +23,7 @@ module.exports = {
     headline: website.headline,
     author: website.author,
     twitter: website.twitter,
-    live: false
+    live: true
   },
   plugins: [
     // {
@@ -94,6 +94,7 @@ module.exports = {
       options: {
         fonts: [
           `Noto Serif\:400,700`,
+          `Work Sans\:400,700`,
           `Barlow Condensed\:400,500,600,700`,
           `Roboto Mono\:500`
         ]
