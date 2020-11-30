@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import { Layout } from '@components/Layout'
-import { Flex } from '@components/Grid'
+import { Box, Flex } from '@components/Grid'
 import Cell from '@components/Cell'
 import BlogCard from '@components/BlogCard'
 import { Text } from '@components/Text'
@@ -39,30 +39,35 @@ export default ({ children, ...props }) => {
         <title>{`${entry.title} | Colin Spence Design`}</title>
         <link rel="canonical" href={`https://colinspencedesign.com/blog/${entry.id}`} />
       </Helmet>
-      <Cell maxWidth="800px" my={5}>
-        <img src={entry.cover} alt={entry.title} width="100%"/>
-        <Text
-          as="h2"
-          fontSize={[5,6,7]}
-          textTransform="uppercase"
-          mt={4}
-        >
-          {entry.title}
-        </Text>
-        <Text
-          as="div"
-          css={{
-            '& p': { marginTop: "20px"},
-            '& a': { textDecoration: "underline"}
-          }}
-          dangerouslySetInnerHTML={{
-            __html: wrapURLs(entry.description)
-          }}
-        />
+      <Cell maxWidth="800px" mt={5} mb={4}>
+        <Box pt={[3,3,0]}>
+          <img src={entry.cover} alt={entry.title} width="100%"/>
+        </Box>
+        <Box px={3}>
+          <Text
+            as="h2"
+            fontSize={[6,7]}
+            textTransform="uppercase"
+            mt={4}
+          >
+            {entry.title}
+          </Text>
+          <Text
+            as="div"
+            css={{
+              '& p': { marginTop: "20px"},
+              '& a': { textDecoration: "underline"}
+            }}
+            dangerouslySetInnerHTML={{
+              __html: wrapURLs(entry.description)
+            }}
+          />
+        </Box>
       </Cell>
       {children}
       <Cell
         my={2}
+        mx={2}
         pt={4}
         borderTop="1px solid"
         borderColor="grey.200"
@@ -84,7 +89,6 @@ export default ({ children, ...props }) => {
               width={["100%","50%","33.3333%"]}
               initialNumberVisible={[3,6,6]}
               index={0}
-              mr={4}
             />
             <BlogCard
               id={nextProject.id}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { css } from 'styled-system'
 import { useEffect } from 'react'
 import HeroLogo from '../features/HeroLogo'
 import logoWordMark from '../images/logo-wordmark.svg'
@@ -9,17 +10,20 @@ import typography from '../../config/typography'
 
 const HeroSection = ({isLive}) => {
 
+  let vh = "";
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const handleResize = () => {
+    const setVH = () => {
       let vh = window.innerHeight * 0.01;
       document.querySelector('.hero-section').style.setProperty('--vh', `${vh}px`);
     };
 
-    window.addEventListener('resize', handleResize);
+
+    window.addEventListener('resize', setVH);
     return () => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('resize', setVH)
     };
   });
 
@@ -27,11 +31,14 @@ const HeroSection = ({isLive}) => {
     <Flex
       alignItems="center"
       bg="grey.100"
-      height="100vh"
       justifyContent="center"
       position="relative"
       width="100vw"
       className="hero-section"
+      css={{
+        height: "100vh",
+        height: `calc(var(--vh, 1vh) * 100)`,
+      }}
     >
       <Box
         bg="grey.500"

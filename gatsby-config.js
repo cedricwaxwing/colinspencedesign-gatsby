@@ -23,35 +23,32 @@ module.exports = {
     headline: website.headline,
     author: website.author,
     twitter: website.twitter,
-    live: true
+    live: false
   },
   plugins: [
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: website.googleAnalyticsId,
-    //     anonymize: true,
-    //     optimizeId: '4703981356',
-    //     pageTransitionDelay: 1,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: website.googleAnalyticsId,
+        anonymize: true,
+        optimizeId: 'OPT-TPXVSXF',
+        pageTransitionDelay: 1,
 
-    //   }
-    // },
+      }
+    },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["website.googleAnalyticsId"],
+        trackingIds: ['G-VH47R4F421','G-254378060'],
         gtagConfig: {
-          optimize_id: "14275915",
+          optimize_id: "OPT-TPXVSXF",
           anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        pluginConfig: {
-          respectDNT: true,
+          head: true,
         },
       },
     },
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

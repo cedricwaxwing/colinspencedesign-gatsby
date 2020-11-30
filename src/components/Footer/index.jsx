@@ -9,7 +9,7 @@ const Footer = ({ children }) => (
   <Box as="footer" bg="grey.800" color="white" px={3} py={5} width="100vw">
     <Cell>
       <Flex justifyContent="space-between" alignItems="center">
-        <Box>
+        <Box mr={2}>
           {children}
         </Box>
         <GoToTop/>

@@ -26,7 +26,7 @@ const Layout = ({ children, isLive, prev, current, next, path, props }) => (
     <Footer>
       <Text fontSize={2}>2009 - {year} © Colin Spence Design</Text>
       <Text fontSize={1} color="grey.300">
-        With help along the way from all of
+        With help along the way from
         {` `}
         <AniLink
           paintDrip
