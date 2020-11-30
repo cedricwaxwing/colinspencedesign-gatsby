@@ -26,26 +26,28 @@ module.exports = {
     live: false
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: website.googleAnalyticsId,
-        anonymize: true,
-        optimizeId: 'OPT-TPXVSXF',
-        pageTransitionDelay: 1,
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: website.googleAnalyticsId,
+    //     anonymize: true,
+    //     optimizeId: 'OPT-TPXVSXF',
+    //     pageTransitionDelay: 1,
 
-      }
-    },
+    //   }
+    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ['G-VH47R4F421','G-254378060'],
+        trackingIds: ['G-VH47R4F421'],
         gtagConfig: {
           optimize_id: "OPT-TPXVSXF",
           anonymize_ip: true,
-          head: true,
         },
+        pluginConfig: {
+          head: true,
+        }
       },
     },
     `gatsby-plugin-emotion`,
