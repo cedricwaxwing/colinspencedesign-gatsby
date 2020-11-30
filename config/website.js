@@ -20,6 +20,6 @@ module.exports = {
   author: ``,
 
   // Google & Twitter
-  googleAnalyticsId: `G-254378060`, // Google Analytics ID
+  googleAnalyticsId: `G-VH47R4F421`, // Google Analytics ID
   twitter: `@spencec6` // Twitter username
 };
