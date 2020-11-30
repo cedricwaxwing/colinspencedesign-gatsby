@@ -10,22 +10,24 @@ import typography from '../../config/typography'
 
 const HeroSection = ({isLive}) => {
 
-  let vh = "";
-
   useEffect(() => {
     if (typeof window === 'undefined') return;
+  
+    let vh = window.innerHeight * 0.01;
+    document.querySelector('.hero-section').style.setProperty('--vh', `${vh}px`);
 
     const setVH = () => {
       let vh = window.innerHeight * 0.01;
       document.querySelector('.hero-section').style.setProperty('--vh', `${vh}px`);
     };
-
-
+  
     window.addEventListener('resize', setVH);
     return () => {
       window.removeEventListener('resize', setVH)
     };
   });
+
+
 
   return (
     <Flex
@@ -59,9 +61,10 @@ const HeroSection = ({isLive}) => {
         zIndex="2"
       />
       <Box
-        bottom={3}
+        bottom={0}
         position="absolute"
         right={3}
+        className="rotated-text"
         css={`
           transform: rotate(90deg);
           transform-origin: top right;
@@ -70,8 +73,8 @@ const HeroSection = ({isLive}) => {
         <Text
           color="grey.700"
           fontFamily={typography.options.monoFontFamily.toString()}
-          fontSize={[1, 2]}
-          letterSpacing="1px"
+          fontSize={['12px', 2]}
+          letterSpacing={["0.3px","1px"]}
         >
           UX/UI and Web Design Specialist
         </Text>
