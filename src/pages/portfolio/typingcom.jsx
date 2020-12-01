@@ -4,6 +4,7 @@ import PortfolioProject from "../../templates/project";
 import { Box, Flex } from "@components/Grid";
 import { OutboundLink } from "@components/Link";
 import Cell from "@components/Cell";
+import Testimonial from "@components/Testimonial";
 import Image from "@components/Image";
 import { Text } from "@components/Text";
 import SalesSiteVideo from "../../../static/images/typingcom-sales-site.mp4";
@@ -48,7 +49,19 @@ export default ({ data }) => {
     ],
     thumbnail: data.thumbnail.childImageSharp.fluid,
     tags: ["Product Design", "Web Development", "Illustration"],
-    description: <Description />
+    description: <Description />,
+    testimonial: {
+      message: [
+        `Immensely creative, diligent, and quick, I found it super easy to work alongside Colin and I still admire him to this day. When I think of Colin's work, I think of the word "clean". Seeing him in action I know that these clean designs only come from deeply understanding the stakeholder needs, thorough research, careful planning, and expert execution.`,
+        `On a personal level, Colin is a tremendous guy. Generous with his time and kind with his words, I've always enjoyed working and socializing with him in and out of work (especially important for an all remote company). He always was equally as quick to share a new design tool as he was a stakeholder insight or a heartfelt congratulations.`,
+      ],
+      author: {
+        image: data.julian.childImageSharp.fluid,
+        name: 'Julian Rosado',
+      },
+      role: 'Product Designer',
+      company: 'Teaching.com'
+    },
   };
 
   return (
@@ -190,6 +203,7 @@ export default ({ data }) => {
           </Flex>
         </Cell>
       </Box>
+      <Testimonial testimonial={entry.testimonial}/>
       <Box px={4} mt={5}>
         <Cell overflowX="hidden">
           <ProjectHeading>
@@ -295,6 +309,15 @@ export const query = graphql`
     ) {
       childImageSharp {
         fluid(maxWidth: 500, quality: 60) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    julian: file(
+      relativePath: { eq: "testimonials/julian.jpeg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 80, quality: 90) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
