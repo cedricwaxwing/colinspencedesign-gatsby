@@ -39,7 +39,7 @@ export default ({ children, ...props }) => {
         <title>{`${entry.title} | Colin Spence Design`}</title>
         <link rel="canonical" href={`https://colinspencedesign.com/blog/${entry.id}`} />
       </Helmet>
-      <Cell maxWidth="800px" mt={5} mb={4}>
+      <Cell maxWidth="800px" mt={6} mb={4}>
         <Box pt={[3,3,0]} borderRadius="8px" overflow="hidden">
           <img src={entry.cover} alt={entry.title} width="100%" />
         </Box>
