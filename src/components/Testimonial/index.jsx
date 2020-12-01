@@ -51,7 +51,7 @@ const Testimonial = props => {
               >
                 {testimonial.message.map((paragraph, index) => {
                   return (
-                    <Text as="p" lineHeight="1.5" mt={index > 0 ? 4 : null}>{paragraph}</Text>
+                    <Text as="p" lineHeight="1.5" key={index} mt={index > 0 ? 4 : null}>{paragraph}</Text>
                   )
                 })}
             </Text>

@@ -40,8 +40,8 @@ export default ({ children, ...props }) => {
         <link rel="canonical" href={`https://colinspencedesign.com/blog/${entry.id}`} />
       </Helmet>
       <Cell maxWidth="800px" mt={5} mb={4}>
-        <Box pt={[3,3,0]}>
-          <img src={entry.cover} alt={entry.title} width="100%"/>
+        <Box pt={[3,3,0]} borderRadius="8px" overflow="hidden">
+          <img src={entry.cover} alt={entry.title} width="100%" />
         </Box>
         <Box px={3}>
           <Text
