@@ -24,7 +24,7 @@ const Button = styled('button')(
     whiteSpace: 'nowrap',
     '&:focus': {
       outline: 0,
-      boxShadow: `0 0 0 3px #7ece18`
+      boxShadow: `0 0 0 3px #818cf8`
     }
   },
   border,

@@ -4,6 +4,7 @@ import { Box, Flex } from '@components/Grid'
 import PortfolioProject from '../../templates/project'
 import Cell from '@components/Cell'
 import Image from '@components/Image'
+import Testimonial from '@components/Testimonial'
 import YangMountain from '../../features/YangMountain'
 import { Text } from '@components/Text'
 import { OutboundLink } from '@components/Link'
@@ -36,14 +37,24 @@ export default ({ data }) => {
     ],
     thumbnail: data.logo.childImageSharp.fluid,
     tags: ['Graphic Design', 'Web Development'],
-    description: <Description/>
+    description: <Description/>,
+    testimonial: {
+      message: [`In addition to being a reliable, talented designer, Colin is a wonderful person and collaborator. Colin is exceptional at receiving feedback, incorporating it into his work, and putting in the time and energy necessary to execute your vision. I sincerely trust Colin's judgement and his keen eye, and have relied on him to provide me with feedback and guidance, which he also does outstandingly well.`],
+      author: {
+        image: data.annie.childImageSharp.fluid,
+        name: 'Annie Beyer',
+      },
+      role: 'Creative Director',
+      company: 'Yang2020'
+    },
   }
 
   return (
     <PortfolioProject entry={entry} prev="typingcom" next="thehooligans">
-      <Box mb={[3, 4]}>
+      <Box >
         <Image fluid={entry.banners} width="100%" />
       </Box>
+      <Testimonial mb={[3, 4]} testimonial={entry.testimonial} />
       <Box px={4} mt={5}>
         <Cell overflowX="hidden">
           <ProjectHeading>
@@ -85,7 +96,7 @@ export default ({ data }) => {
         <Cell maxWidth="512px">
           <Text as="p" mt={4}>
             I was responsible for the design and the frontend implementation (html, css, and javascript) of the progress piece below. Illustration of the mountains and Yang were provided by{` `}
-            <OutboundLink>Launch Mode Design</OutboundLink> and implementation was handled by the team's web developer.
+            <OutboundLink to="https://www.launchmodedesign.com/">Launch Mode Design</OutboundLink> and implementation was handled by the team's web developer.
           </Text>
           <Text as="p" mt={4}>
             This feature worked so well that it helped Yang reach over $10 million in Q3, exceeding the previous quarter's funding by over 3 times, his largest fundraising growth during the campaign.
@@ -152,6 +163,15 @@ export const query = graphql`
     ) {
       childImageSharp {
         fluid(maxWidth: 1024, quality: 60) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    annie: file(
+      relativePath: { eq: "testimonials/annie.jpeg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 80, quality: 90) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
