@@ -65,41 +65,41 @@ export default ({ children, ...props }) => {
         </Box>
       </Cell>
       {children}
-      <Cell
-        my={2}
-        mx={2}
-        pt={4}
-        borderTop="1px solid"
-        borderColor="grey.200"
-      >
-        <Text
-          as="h3"
-          fontSize={[4,5,6]}
-          textAlign="center"
-          textTransform="uppercase"
-          width="100%"
+      <Box px={2}>
+        <Cell
+          my={2}
+          pt={4}
+          maxWidth="800px"
+          borderTop="1px solid"
+          borderColor="grey.200"
         >
-          Related Projects
-        </Text>
-          <Flex flexwrap="wrap" alignItems="center" justifyContent="center" my={4}>
-            <BlogCard
-              id={previousProject.id}
-              title={previousProject.title}
-              src={previousProject.cover}
-              width={["100%","50%","33.3333%"]}
-              initialNumberVisible={[3,6,6]}
-              index={0}
-            />
-            <BlogCard
-              id={nextProject.id}
-              title={nextProject.title}
-              src={nextProject.cover}
-              width={["100%","50%","33.3333%"]}
-              initialNumberVisible={[3,6,6]}
-              index={1}
-            />
-          </Flex>
-      </Cell>
+          <Text
+            as="h3"
+            fontSize={[4,5,6]}
+            textAlign="center"
+            textTransform="uppercase"
+            width="100%"
+          >
+            Related Projects
+          </Text>
+            <Flex flexwrap="wrap" alignItems="center" justifyContent="center" my={4}>
+              <BlogCard
+                id={previousProject.id}
+                title={previousProject.title}
+                src={previousProject.cover}
+                width={["100%","50%","40%"]}
+                index={0}
+              />
+              <BlogCard
+                id={nextProject.id}
+                title={nextProject.title}
+                src={nextProject.cover}
+                width={["100%","50%","40%"]}
+                index={1}
+              />
+            </Flex>
+        </Cell>
+      </Box>
     </Layout>
   )
 }
