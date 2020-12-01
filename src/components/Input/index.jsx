@@ -28,6 +28,10 @@ const Input = props => (
             borderColor: 'grey.800',
             outline: 'none',
           },
+          '&::placeholder': {
+            color: 'grey.600',
+            opacity: 1
+          }
         })}
     `}
     {...props}

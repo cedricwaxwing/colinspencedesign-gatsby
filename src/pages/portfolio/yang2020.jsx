@@ -39,7 +39,7 @@ export default ({ data }) => {
     tags: ['Graphic Design', 'Web Development'],
     description: <Description/>,
     testimonial: {
-      message: [`In addition to being a reliable, talented designer, Colin is a wonderful person and collaborator. Colin is exceptional at receiving feedback, incorporating it into his work, and putting in the time and energy necessary to execute your vision. I sincerely trust Colin's judgement and his keen eye, and have relied on him to provide me with feedback and guidance, which he also does outstandingly well.`],
+      message: [`The breadth and depth of Colin's talents never cease to amaze me — he is the rare combination of technically skilled and profoundly creative — Colin can code an amazing website just as easily as he can explore, define, and set a brand's visual identity as well as everything in between.`],
       author: {
         image: data.annie.childImageSharp.fluid,
         name: 'Annie Beyer',
