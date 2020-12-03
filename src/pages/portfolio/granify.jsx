@@ -83,10 +83,14 @@ export default ({ data }) => {
 
   return (
     <PortfolioProject entry={entry} prev="nightvision" next="owlustrations">
-      <Box mb={[3, 4]}>
+      <Box>
         <Image fluid={entry.banner} width="100%" />
       </Box>
-      <Box px={4}>
+      <Text mt={1} textAlign="right" fontSize={1} px={3}>
+        Illustration: {` `}
+        <OutboundLink target="_blank" to="https://www.dalaney.ca/">Dalaney LaGrange</OutboundLink>
+      </Text>
+      <Box px={4} mt={[3, 4]}>
         <Cell>
           <Flex
             mx={-4}

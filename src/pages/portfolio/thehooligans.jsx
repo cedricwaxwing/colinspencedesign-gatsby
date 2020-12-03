@@ -13,7 +13,7 @@ export default ({ data }) => {
     slug: 'thehooligans',
     title: 'The Hooligans',
     link: {
-      url: 'https://www.thehooligansagency.com',
+      url: 'https://5f5110ce6a24ff3bfaa75337--the-hooligans.netlify.app/',
       name: 'See The Hooligans',
     },
     banners: [data.desktopBanner.childImageSharp.fluid],
