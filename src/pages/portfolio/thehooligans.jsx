@@ -149,6 +149,18 @@ export default ({ data }) => {
           <Caption mt={3}>Style Guide</Caption>
         </Cell>
       </Box>
+      <Box px={4}>
+        <Cell maxWidth="1024px">
+          <Shadow mt={5}>
+            <Image
+              fluid={data.ctaBanner.childImageSharp.fluid}
+              alt={`${entry.title} CTA Banner`}
+              width="100%"
+            />
+          </Shadow>
+          <Caption mt={3}>CTA Banner and Footer</Caption>
+        </Cell>
+      </Box>
     </PortfolioProject>
   )
 }
@@ -195,6 +207,15 @@ export const query = graphql`
     }
     stylescape3: file(
       relativePath: { eq: "portfolio/3-thehooligans/rise-above.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1024, quality: 80) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    ctaBanner: file(
+      relativePath: { eq: "portfolio/3-thehooligans/hooligans-cta.png" }
     ) {
       childImageSharp {
         fluid(maxWidth: 1024, quality: 80) {

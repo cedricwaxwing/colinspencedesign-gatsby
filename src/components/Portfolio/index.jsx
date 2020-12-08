@@ -14,6 +14,8 @@ const Shadow = styled(Box)`
 
 const CaptionText = styled(Text)`
   ${tw`tracking-wide uppercase`}
+  letter-spacing: 1px;
+  text-decoration: uppercase;
 `
 
 const Caption = ({ children, ...props }) => (
