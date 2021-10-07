@@ -38,15 +38,26 @@ export default ({ data }) => {
     thumbnail: data.logo.childImageSharp.fluid,
     tags: ['Graphic Design', 'Web Development'],
     description: <Description/>,
-    testimonial: {
-      message: [`The breadth and depth of Colin's talents never cease to amaze me — he is the rare combination of technically skilled and profoundly creative — Colin can code an amazing website just as easily as he can explore, define, and set a brand's visual identity as well as everything in between.`],
-      author: {
-        image: data.annie.childImageSharp.fluid,
-        name: 'Annie Beyer',
+    testimonials: [
+      {
+        message: [`The breadth and depth of Colin's talents never cease to amaze me — he is the rare combination of technically skilled and profoundly creative — Colin can code an amazing website just as easily as he can explore, define, and set a brand's visual identity as well as everything in between.`],
+        author: {
+          image: data.annie.childImageSharp.fluid,
+          name: 'Annie Beyer',
+        },
+        role: 'Creative Director',
+        company: 'Yang2020'
       },
-      role: 'Creative Director',
-      company: 'Yang2020'
-    },
+      {
+        message: [`Colin began working with the Yang2020 campaign in early 2019, when the staff was still single digits. As our staff scaled by 30x through 2019, Colin was without a doubt one of the central linchpins keeping our marketing efforts together. He worked swiftly and communicated clearly which saved the day many times as we maneuvered our crazy rocket ship.`],
+        author: {
+          image: data.andrew.childImageSharp.fluid,
+          name: 'Andrew Frawley',
+        },
+        role: 'Communications Manager',
+        company: 'Yang2020'
+      },
+    ]
   }
 
   return (
@@ -54,7 +65,7 @@ export default ({ data }) => {
       <Box >
         <Image fluid={entry.banners} width="100%" />
       </Box>
-      <Testimonial mb={[3, 4]} testimonial={entry.testimonial} />
+      <Testimonial mb={[3, 4]} testimonial={entry.testimonials[1]} />
       <Box px={4} mt={5}>
         <Cell overflowX="hidden">
           <ProjectHeading>
@@ -107,7 +118,8 @@ export default ({ data }) => {
           <Caption mt={3} textTransform="uppercase">Q3 Progress Bar - Design and Development</Caption>
         </Cell>
       </Box>
-      <Box bg="grey.100" px={4} py={5} mt={5}>
+      <Testimonial mt={5} testimonial={entry.testimonials[0]} />
+      <Box bg="grey.100" px={4} py={5}>
         <Cell>
           <Flex flexWrap="wrap" mx={-4} mt={-4}>
             {data.socials.edges.map((social, index) => {
@@ -163,6 +175,15 @@ export const query = graphql`
     ) {
       childImageSharp {
         fluid(maxWidth: 1024, quality: 60) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    andrew: file(
+      relativePath: { eq: "testimonials/andrew.jpeg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 80, quality: 90) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

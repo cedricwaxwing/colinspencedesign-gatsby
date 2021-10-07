@@ -39,6 +39,14 @@ const GlobalStyles = createGlobalStyle`
       transform: rotate(720deg);
     }
   }
+  @keyframes testimonialFade {
+    0%, 100% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+  }
 `
 
 export default GlobalStyles
