@@ -54,11 +54,11 @@ const AboutSection = () => {
                 sometimes both at the same time).
               </Text>
               <Text fontSize={[2, 3]} lineHeight="1.75" mt={2}>
-                I am currently happily employed as a Product Designer at&nbsp;
-                <OutboundLink to="//www.teaching.com" from="about section" target="_blank">
-                  Teaching.com
+                I am currently a web3 Product Designer at&nbsp;
+                <OutboundLink to="//www.dorg.tech" from="about section" target="_blank">
+                  dOrg
                 </OutboundLink>
-                .
+                , and a number of other DAOs.
               </Text>
             </Box>
           </Flex>
