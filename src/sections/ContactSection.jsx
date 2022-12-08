@@ -49,16 +49,6 @@ const ContactSection = () => {
                 {email}
               </OutboundLink>
             </Box>
-            <Box>
-              <OutboundLink
-                display={['none','none','inline-block']}
-                from="contact"
-                mt={3}
-                to={`tel:1-${phone.replace('(', '').replace(') ', '-')}`}
-              >
-                {phone}
-              </OutboundLink>
-            </Box>
             <Flex mt={3}>
               <OutboundLink
                 mr={2}
