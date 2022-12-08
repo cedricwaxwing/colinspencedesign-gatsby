@@ -1,12 +1,12 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Cell from '@components/Cell'
-import ContactForm from '@components/ContactForm'
-import { Box, Flex } from '@components/Grid'
-import Heading from '@components/Heading'
-import { OutboundLink } from '@components/Link'
-import { Text } from '@components/Text'
+import Cell from "@components/Cell";
+import ContactForm from "@components/ContactForm";
+import { Box, Flex } from "@components/Grid";
+import Heading from "@components/Heading";
+import { OutboundLink } from "@components/Link";
+import { Text } from "@components/Text";
 
 const ContactSection = () => {
   const data = useStaticQuery(graphql`
@@ -18,9 +18,9 @@ const ContactSection = () => {
         }
       }
     }
-  `)
+  `);
 
-  const { phone, email } = data.site.siteMetadata
+  const { phone, email } = data.site.siteMetadata;
 
   return (
     <Cell id="contact" px={3}>
@@ -32,8 +32,8 @@ const ContactSection = () => {
         fontSize={1}
         letterSpacing="caps"
         mt={2}
-        textAlign={["left","left","center"]}
-        css={{ textTransform: 'uppercase' }}
+        textAlign={["left", "left", "center"]}
+        css={{ textTransform: "uppercase" }}
       >
         Let's Chat!
       </Text>
@@ -42,21 +42,11 @@ const ContactSection = () => {
           <Box width={[1, 1 / 2, 1 / 3]} pr={3} mt={3}>
             <Box>
               <OutboundLink
-                display={['none','none','inline-block']}
+                display={["none", "none", "inline-block"]}
                 from="contact"
                 to={`mailto:${email}`}
               >
                 {email}
-              </OutboundLink>
-            </Box>
-            <Box>
-              <OutboundLink
-                display={['none','none','inline-block']}
-                from="contact"
-                mt={3}
-                to={`tel:1-${phone.replace('(', '').replace(') ', '-')}`}
-              >
-                {phone}
               </OutboundLink>
             </Box>
             <Flex mt={3}>
@@ -92,7 +82,7 @@ const ContactSection = () => {
         </Flex>
       </Box>
     </Cell>
-  )
-}
+  );
+};
 
-export default ContactSection
+export default ContactSection;
