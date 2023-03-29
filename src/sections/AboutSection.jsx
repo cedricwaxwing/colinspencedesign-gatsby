@@ -58,7 +58,7 @@ const AboutSection = () => {
                 <OutboundLink to="//www.dorg.tech" from="about section" target="_blank">
                   dOrg
                 </OutboundLink>
-                , and a number of other DAOs under the pseudonym
+                , and a number of other DAOs under the pseudonym{` `}
                 <OutboundLink to="//cedricwaxwing.xyz" from="about section" target="_blank">
                   Cedric Waxwing
                 </OutboundLink>.
