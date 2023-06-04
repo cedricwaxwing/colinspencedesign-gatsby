@@ -70,12 +70,6 @@ const FineFolks = () => {
           <Box as="ul" mt={4}>
             <Box as="li">
               <Text fontSize={2}>
-                <strong><span role="img" aria-label="love">❤️</span> Erin Spence - </strong>
-                You're my everything
-              </Text>
-            </Box>
-            <Box as="li">
-              <Text fontSize={2}>
                 <strong><span role="img" aria-label="love-face">😍</span> Charlotte/Bennett Spence - </strong>
                 You're my motivation and inspiration
               </Text>
