@@ -365,8 +365,7 @@ export default ({ data }) => {
             The Results
           </Text>
           <Text fontSize={2} mt={1} as="p">
-            The CEO was very impressed with the amount of time and thought I had
-            put into this project. By setting up recurring retrospectives for
+            By setting up recurring retrospectives for
             each group, they were able to quickly address pain points and
             implement new or different procedures to accommodate. I invited the
             CEO to the retrospectives, so that he could offer insight from his
